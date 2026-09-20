@@ -13,6 +13,7 @@ import { thrillerBark } from './arcs/thriller-bark';
 import { wano } from './arcs/wano';
 import { waterSeven } from './arcs/water-seven';
 import { wholeCake } from './arcs/whole-cake';
+import { zou } from './arcs/zou';
 
 /** Story order. New arcs get appended here and nowhere else. */
 export const ARCS: Arc[] = [
@@ -26,6 +27,7 @@ export const ARCS: Arc[] = [
   fishManIsland,
   punkHazard,
   dressrosa,
+  zou,
   wholeCake,
   wano,
   egghead,
