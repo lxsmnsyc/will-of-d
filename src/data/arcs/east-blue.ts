@@ -52,6 +52,7 @@ export const eastBlue: Arc = {
     { id: 'zeff', name: 'Zeff', epithet: 'Red Leg', affiliation: 'Baratie' },
     { id: 'gin', name: 'Gin', affiliation: 'Krieg Pirates' },
     { id: 'coby', name: 'Koby', affiliation: 'Marines' },
+    { id: 'alvida', name: 'Alvida', affiliation: 'Cross Guild' },
     { id: 'helmeppo', name: 'Helmeppo', affiliation: 'Marines' },
     { id: 'morgan', name: 'Axe-Hand Morgan', affiliation: 'Marines' },
     {
@@ -391,6 +392,39 @@ export const eastBlue: Arc = {
       to: 'ipponmatsu',
       type: 'influenced',
       note: 'Rekindled an old shopkeeper\u2019s faith in real swordsmen',
+    },
+    {
+      from: 'makino',
+      to: 'shanks',
+      type: 'friend',
+      note: 'Kept the bar his crew drank in for a year',
+    },
+    {
+      from: 'makino',
+      to: 'ace',
+      type: 'taught',
+      note: 'He came down the mountain to learn manners, so he could thank Shanks properly',
+    },
+    { from: 'makino', to: 'sabo', type: 'friend' },
+    {
+      from: 'makino',
+      to: 'dadan',
+      type: 'friend',
+      note: 'Carried ale and food up to the bandits, and sat with her after Ace died',
+    },
+    { from: 'makino', to: 'garp', type: 'friend' },
+    { from: 'woop-slap', to: 'dadan', type: 'friend' },
+    {
+      from: 'makino',
+      to: 'woop-slap',
+      type: 'friend',
+      note: 'The only one in the village who still listens to the mayor',
+    },
+    {
+      from: 'alvida',
+      to: 'buggy',
+      type: 'friend',
+      note: 'Co-captains of the Buggy and Alvida Alliance, and still together in Cross Guild',
     },
   ],
 };

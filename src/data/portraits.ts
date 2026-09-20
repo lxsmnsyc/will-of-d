@@ -7,6 +7,7 @@ export const PORTRAIT_IDS: ReadonlySet<string> = new Set([
   'aisa',
   'akainu',
   'ally',
+  'alvida',
   'amande',
   'anana',
   'aokiji',
