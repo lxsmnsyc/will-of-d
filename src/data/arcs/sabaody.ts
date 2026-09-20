@@ -42,6 +42,9 @@ export const sabaody: Arc = {
       epithet: 'Kizaru',
       affiliation: 'Marines',
     },
+    { id: 'pappag', name: 'Pappag', affiliation: 'Takoyaki 8' },
+    { id: 'duval', name: 'Duval', affiliation: 'Rosy Life Riders' },
+    { id: 'sentomaru', name: 'Sentomaru', affiliation: 'Marines' },
   ],
   relations: [
     {
@@ -131,5 +134,24 @@ export const sabaody: Arc = {
     { from: 'sandersonia', to: 'marigold', type: 'sibling' },
     { from: 'sandersonia', to: 'hancock', type: 'loyalty' },
     { from: 'marigold', to: 'hancock', type: 'loyalty' },
+    {
+      from: 'pappag',
+      to: 'camie',
+      type: 'taught',
+      note: 'Mentoring her as a fashion designer',
+    },
+    {
+      from: 'sanji',
+      to: 'duval',
+      type: 'saved',
+      note: 'Rearranged his face into one the Marines were not hunting',
+    },
+    { from: 'duval', to: 'sanji', type: 'loyalty' },
+    {
+      from: 'sentomaru',
+      to: 'vegapunk',
+      type: 'loyalty',
+      note: 'A personal debt he paid by standing against the World Government',
+    },
   ],
 };
