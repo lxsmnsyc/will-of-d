@@ -144,5 +144,11 @@ export const dressrosa: Arc = {
     { from: 'leo', to: 'luffy', type: 'loyalty' },
     { from: 'orlumbus', to: 'luffy', type: 'loyalty' },
     { from: 'sai', to: 'chinjao', type: 'loyalty' },
+    {
+      from: 'trebol',
+      to: 'doflamingo',
+      type: 'influenced',
+      note: 'Handed a ten-year-old the fruit and the idea of being a god',
+    },
   ],
 };
