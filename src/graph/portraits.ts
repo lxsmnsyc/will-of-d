@@ -1,4 +1,4 @@
-import { PORTRAIT_IDS } from '../data/portraits';
+import { PORTRAIT_STAMPS } from '../data/portraits';
 
 type Entry = { image: HTMLImageElement; ready: boolean } | 'failed';
 
@@ -11,11 +11,17 @@ export function onPortraitLoaded(callback: (() => void) | null): void {
 }
 
 export function hasPortrait(id: string): boolean {
-  return PORTRAIT_IDS.has(id);
+  return PORTRAIT_STAMPS.has(id);
 }
 
+/**
+ * The query carries a hash of the file's bytes, so the folder can be cached for
+ * a year. A replaced portrait arrives under a URL nobody has cached, instead of
+ * waiting for an old one to expire.
+ */
 export function portraitUrl(id: string): string {
-  return `${import.meta.env.BASE_URL}portraits/${id}.webp`;
+  const stamp = PORTRAIT_STAMPS.get(id);
+  return `${import.meta.env.BASE_URL}portraits/${id}.webp?v=${stamp}`;
 }
 
 /**
@@ -24,7 +30,7 @@ export function portraitUrl(id: string): string {
  * portrait once it is drawn large enough to show one.
  */
 export function getPortrait(id: string): HTMLImageElement | null {
-  if (!PORTRAIT_IDS.has(id)) return null;
+  if (!PORTRAIT_STAMPS.has(id)) return null;
 
   const cached = cache.get(id);
   if (cached === 'failed') return null;

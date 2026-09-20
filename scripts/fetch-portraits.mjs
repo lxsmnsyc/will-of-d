@@ -8,15 +8,18 @@
  * This is the first of the two sources; scripts/fetch-portraits-mal.mjs fills
  * in whoever AniList has no face for.
  *
- * The artwork stays the copyright of its rights holders; AniList only serves
+ * The artwork stays the copyright of its rights holders. AniList only serves
  * it. Re-run this when characters are added to src/data/arcs/.
  */
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdirSync } from 'node:fs';
 import sharp from 'sharp';
 import { createServer } from 'vite';
 import { findMatch as bestOf } from './match-names.mjs';
-import { writeManifest } from './portraits-manifest.mjs';
+import {
+  stampFor,
+  writeManifest,
+  writePortrait,
+} from './portraits-manifest.mjs';
 
 const ANIME_ID = 21; // ONE PIECE
 const SIZE = 128;
@@ -39,9 +42,10 @@ const ALIASES = {
 /**
  * AniList's One Piece cast mixes in anime-only characters, and a few of them
  * carry a canon character's name. Skip the match rather than take the wrong
- * face: Shepherd Sommers was landing on a G-5 marine from a filler arc.
+ * face. Shepherd Sommers was landing on a G-5 marine from a filler arc.
+ * Colonel Macro the automaton was landing on Macro the fish-man.
  */
-const NO_MATCH = new Set(['sommers']);
+const NO_MATCH = new Set(['sommers', 'colonel-macro']);
 
 async function loadCharacters() {
   const server = await createServer({
@@ -138,9 +142,7 @@ async function toAvatar(buffer) {
 // which keeps a run after a new arc cheap and leaves MyAnimeList's work alone.
 const only = new Set(process.argv.slice(2));
 const characters = (await loadCharacters()).filter(character =>
-  only.size > 0
-    ? only.has(character.id)
-    : !existsSync(join(OUT_DIR, `${character.id}.webp`)),
+  only.size > 0 ? only.has(character.id) : stampFor(character.id) === null,
 );
 if (characters.length === 0) {
   console.error(`Nothing to fetch. Manifest: ${writeManifest()}.`);
@@ -166,8 +168,10 @@ for (const character of characters) {
     fuzzy.push(`${character.name} -> ${match.name.full}`);
   }
   try {
-    const avatar = await toAvatar(await download(match.image.large));
-    writeFileSync(join(OUT_DIR, `${character.id}.webp`), avatar);
+    writePortrait(
+      character.id,
+      await toAvatar(await download(match.image.large)),
+    );
     saved.push(character.id);
   } catch (error) {
     console.error(`  failed ${character.name}: ${error.message}`);

@@ -390,5 +390,6 @@ export const skypiea: Arc = {
     { from: 'spacey', to: 'enel', type: 'loyalty' },
     { from: 'cosmo', to: 'enel', type: 'loyalty' },
     { from: 'galaxy', to: 'enel', type: 'loyalty' },
+    { from: 'colonel-macro', to: 'enel', type: 'loyalty' },
   ],
 };

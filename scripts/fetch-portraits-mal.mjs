@@ -4,25 +4,31 @@
  *   node scripts/fetch-portraits-mal.mjs            # every character with no file
  *   node scripts/fetch-portraits-mal.mjs shanks     # just these ids, overwriting
  *
- * AniList lists the cast the anime gave a credit to, which leaves half the
- * minor characters here faceless; MyAnimeList carries about three times as
- * many. The One Piece wiki has a picture for nearly everyone else, but its
- * image host answers scripts with a Cloudflare challenge, so the tail of this
- * dataset stays blank rather than be worked around.
+ * AniList lists the cast the anime gave a credit to. That leaves half the
+ * minor characters here faceless. MyAnimeList carries about three times as
+ * many.
  *
- * Without arguments this only fetches characters with no file on disk, so
- * AniList's art wins where both have one and a re-run after adding an arc
- * costs only the new names. Named ids are refetched and overwritten.
+ * The One Piece wiki has a picture for nearly everyone else. Its image host
+ * answers scripts with a Cloudflare challenge, so those characters stay blank
+ * instead of the challenge being worked around.
  *
- * The artwork stays the copyright of its rights holders; MyAnimeList only
+ * Without arguments this only fetches characters with no file on disk.
+ * AniList's art therefore wins where both sources have one, and a re-run after
+ * adding an arc costs only the new names. Named ids are refetched and
+ * overwritten.
+ *
+ * The artwork stays the copyright of its rights holders. MyAnimeList only
  * serves it. Re-run this when characters are added to src/data/arcs/.
  */
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdirSync } from 'node:fs';
 import sharp from 'sharp';
 import { createServer } from 'vite';
 import { findMatch } from './match-names.mjs';
-import { writeManifest } from './portraits-manifest.mjs';
+import {
+  stampFor,
+  writeManifest,
+  writePortrait,
+} from './portraits-manifest.mjs';
 
 const CAST = 'https://api.jikan.moe/v4/anime/21/characters'; // ONE PIECE
 const SIZE = 128;
@@ -34,11 +40,14 @@ const ALIASES = {
 };
 
 /**
- * A partial name match is worth less than a blank node, so skip the ones that
- * land on a stranger: MyAnimeList's "Gram" is not Marco's father, whose page
- * carries a disambiguation notice for exactly this reason.
+ * A partial name match is worth less than a blank node. Skip the ids that land
+ * on a stranger.
+ *
+ * MyAnimeList's "Gram" is not Marco's father. His wiki page carries a
+ * disambiguation notice for that name. Its "Macro" is the fish-man, not the
+ * automaton who shares the name.
  */
-const NO_MATCH = new Set(['gram']);
+const NO_MATCH = new Set(['gram', 'colonel-macro']);
 
 async function loadCharacters() {
   const server = await createServer({
@@ -98,9 +107,7 @@ async function toAvatar(buffer) {
 
 const only = new Set(process.argv.slice(2));
 const characters = (await loadCharacters()).filter(character =>
-  only.size > 0
-    ? only.has(character.id)
-    : !existsSync(join(OUT_DIR, `${character.id}.webp`)),
+  only.size > 0 ? only.has(character.id) : stampFor(character.id) === null,
 );
 
 if (characters.length === 0) {
@@ -136,8 +143,7 @@ for (const character of characters) {
     fuzzy.push(`${character.name} -> ${match.name}`);
   }
   try {
-    const avatar = await toAvatar(await download(match.image));
-    writeFileSync(join(OUT_DIR, `${character.id}.webp`), avatar);
+    writePortrait(character.id, await toAvatar(await download(match.image)));
     saved.push(character.id);
   } catch (error) {
     console.error(`  failed ${character.name}: ${error.message}`);

@@ -220,6 +220,12 @@ export const sabaody: Arc = {
       debut: 'Chapter 524',
     },
     {
+      id: 'shanba',
+      name: 'Shanba',
+      affiliation: 'Torino Kingdom',
+      debut: 'Chapter 524',
+    },
+    {
       id: 'fisher-tiger',
       name: 'Fisher Tiger',
       affiliation: 'Sun Pirates',
@@ -426,6 +432,12 @@ export const sabaody: Arc = {
       to: 'usopp',
       type: 'saved',
       note: 'Pulled him out of the forest’s mouth more than once',
+    },
+    {
+      from: 'shanba',
+      to: 'chopper',
+      type: 'friend',
+      note: 'Hunted the reindeer for stew, then saw out his two years beside him',
     },
   ],
 };

@@ -354,8 +354,34 @@ export const waterSeven: Arc = {
       affiliation: 'Automata',
       debut: 'Chapter 437',
     },
+    {
+      id: 'colonel-macro',
+      name: 'Colonel Macro',
+      affiliation: 'Automata',
+      debut: 'Chapter 437',
+    },
+    {
+      id: 'tsukimi',
+      name: 'Dr. Tsukimi',
+      affiliation: 'Karakuri Island',
+      debut: 'Chapter 448',
+    },
   ],
   relations: [
+    {
+      from: 'spacey',
+      to: 'tsukimi',
+      type: 'loyalty',
+      note: 'One of the four automata the old roboticist built for company',
+    },
+    { from: 'cosmo', to: 'tsukimi', type: 'loyalty' },
+    { from: 'galaxy', to: 'tsukimi', type: 'loyalty' },
+    {
+      from: 'colonel-macro',
+      to: 'tsukimi',
+      type: 'loyalty',
+      note: 'Flew to the moon with the others to bury the man who made them',
+    },
     { from: 'tom', to: 'franky', type: 'taught' },
     { from: 'tom', to: 'franky', type: 'adopted' },
     { from: 'tom', to: 'iceburg', type: 'taught' },
@@ -387,7 +413,6 @@ export const waterSeven: Arc = {
       type: 'saved',
       note: 'Burned a flag so she would say she wanted to live',
     },
-    { from: 'lucci', to: 'franky', type: 'influenced' },
     {
       from: 'tom',
       to: 'franky',

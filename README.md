@@ -9,7 +9,7 @@ it is therefore the one type whose importance flows to the target rather than th
 Partnership, siblinghood and friendship are symmetric, so they are drawn without an
 arrowhead and the authored direction means nothing.
 
-The nine types are grouped into three colour families — kinship, legacy and devotion.
+The nine types are grouped into three colour families: kinship, legacy and devotion.
 Inside a family the dash pattern separates one type from another and the arrowhead
 separates a directed relation from a symmetric one, so `parent` and `sibling` are both
 solid and only `parent` carries an arrow, exactly as `saved` and `friend` do. Identity
@@ -38,31 +38,38 @@ pnpm preview
 ## Portraits
 
 `public/portraits/<id>.webp` holds a 128px square crop per character, re-encoded with
-sharp, 685 of 754 characters and about 4 MB in total. Two public APIs supply them, in
-order:
+sharp. 688 of 757 characters have one, about 4 MB in total. Two public APIs supply them,
+in this order:
 
 ```sh
 node scripts/fetch-portraits.mjs      # AniList
 node scripts/fetch-portraits-mal.mjs  # MyAnimeList, for whoever AniList has no face for
 ```
 
-AniList carries the cast the anime gave a credit to, which is most of the named characters
-and few of the minor ones; MyAnimeList lists about three times as many and fills the
-second half. The MyAnimeList pass only fetches characters with no file on disk, so
-AniList's art wins where both have one and a run after adding an arc costs only the new
-names. Pass ids to either to refetch and overwrite just those.
+AniList lists the cast the anime gave a credit to. That covers most of the named
+characters and few of the minor ones. MyAnimeList lists about three times as many and
+fills the rest.
 
-The One Piece wiki has a picture for nearly everyone still missing, but its image host
-answers scripts with a Cloudflare challenge, so those 69 keep their monogram.
+Both scripts skip anyone who already has a file. AniList's art therefore wins where both
+have one, and a run after adding an arc costs only the new names. Pass ids to either
+script to refetch and overwrite just those.
 
-Both rewrite `src/data/portraits.ts` from the folder itself — the generated set of ids
-that have a file, so the canvas never requests one that does not exist. Anyone without a
-portrait falls back to a monogram, on the canvas and in the panel alike, so a missing face
-costs nothing.
+The One Piece wiki has a picture for nearly everyone still missing. Its image host answers
+scripts with a Cloudflare challenge, so those 69 keep their monogram.
 
-The artwork remains the copyright of its rights holders; AniList and MyAnimeList only
-host it. This is a non-commercial fan visualisation. Swap the images or drop the folder if
-that does not suit your use.
+Both scripts rewrite `src/data/portraits.ts` from the folder itself. It holds every id
+that has a file and the hash of that file's bytes, so the canvas never requests a portrait
+that does not exist. Anyone without one falls back to a monogram, on the canvas and in the
+panel, so a missing face costs nothing.
+
+The page appends the hash to the request: `portraits/luffy.webp?v=1a2b3c4d`. Caches key on
+the query as well as the path. The folder can therefore be served `immutable` for a year
+(see `public/_headers`), and a replaced portrait still arrives at once under a URL nobody
+has cached.
+
+The artwork stays the copyright of its rights holders. AniList and MyAnimeList only host
+it. This is a non-commercial fan visualisation. Swap the images or drop the folder if that
+does not suit your use.
 
 ## Where the data comes from
 
@@ -91,3 +98,6 @@ rendering a silently wrong graph.
 
 To extend the graph, add an arc file, export it, and append it to `ARCS` in
 `src/data/index.ts`. Nothing else needs to change.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) has the rest. It covers which sources count, what
+makes a relation, where an entry belongs, and how to check it.
