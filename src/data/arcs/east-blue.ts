@@ -160,6 +160,8 @@ export const eastBlue: Arc = {
     { id: 'brannew', name: 'Brannew', affiliation: 'Marines' },
     { id: 'john-giant', name: 'John Giant', affiliation: 'Marines' },
     { id: 'stainless', name: 'Stainless', affiliation: 'Marines' },
+    { id: 'rockstar', name: 'Rockstar', affiliation: 'Red Hair Pirates' },
+    { id: 'shu', name: 'Shu', affiliation: 'Marines' },
   ],
   relations: [
     {
@@ -473,5 +475,14 @@ export const eastBlue: Arc = {
     { from: 'john-giant', to: 'sengoku', type: 'loyalty' },
     { from: 'stainless', to: 'sengoku', type: 'loyalty' },
     { from: 'garp', to: 'luffy', type: 'taught' },
+    {
+      from: 'bogard',
+      to: 'coby',
+      type: 'taught',
+      note: 'Drilled both recruits in swordsmanship, under Garp\u2019s eye',
+    },
+    { from: 'bogard', to: 'helmeppo', type: 'taught' },
+    { from: 'rockstar', to: 'shanks', type: 'loyalty' },
+    { from: 'shu', to: 'smoker', type: 'loyalty' },
   ],
 };

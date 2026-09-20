@@ -21,6 +21,8 @@ export const zou: Arc = {
     { id: 'miyagi', name: 'Miyagi', affiliation: 'Mokomo Dukedom' },
     { id: 'tristan', name: 'Tristan', affiliation: 'Mokomo Dukedom' },
     { id: 'ikkaku', name: 'Ikkaku', affiliation: 'Heart Pirates' },
+    { id: 'bariete', name: 'Bariete', affiliation: 'Mokomo Dukedom' },
+    { id: 'wany', name: 'Wany', affiliation: 'Mokomo Dukedom' },
   ],
   relations: [
     {
@@ -59,5 +61,7 @@ export const zou: Arc = {
     { from: 'raizo', to: 'momonosuke', type: 'loyalty' },
     { from: 'kanjuro', to: 'momonosuke', type: 'loyalty' },
     { from: 'ikkaku', to: 'law', type: 'loyalty' },
+    { from: 'bariete', to: 'nekomamushi', type: 'loyalty' },
+    { from: 'wany', to: 'wanda', type: 'loyalty' },
   ],
 };

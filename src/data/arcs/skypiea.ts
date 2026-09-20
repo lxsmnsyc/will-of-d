@@ -60,6 +60,11 @@ export const skypiea: Arc = {
     { id: 'satori', name: 'Satori', affiliation: 'Birka' },
     { id: 'gedatsu', name: 'Gedatsu', affiliation: 'Birka' },
     { id: 'comil', name: 'Comil', affiliation: 'Marines' },
+    { id: 'mckinley', name: 'McKinley', affiliation: "God's Guards" },
+    { id: 'yama', name: 'Yama', affiliation: 'Skypiea' },
+    { id: 'hotori', name: 'Hotori', affiliation: "God's Army" },
+    { id: 'kotori', name: 'Kotori', affiliation: "God's Army" },
+    { id: 'shandia-chief', name: 'Shandia Chief', affiliation: 'Shandia' },
   ],
   relations: [
     { from: 'noland', to: 'cricket', type: 'parent', note: 'Ancestor' },
@@ -156,5 +161,21 @@ export const skypiea: Arc = {
     { from: 'satori', to: 'enel', type: 'loyalty' },
     { from: 'gedatsu', to: 'enel', type: 'loyalty' },
     { from: 'comil', to: 'sengoku', type: 'loyalty' },
+    { from: 'mckinley', to: 'gan-fall', type: 'loyalty' },
+    { from: 'yama', to: 'enel', type: 'loyalty' },
+    { from: 'hotori', to: 'enel', type: 'loyalty' },
+    { from: 'kotori', to: 'enel', type: 'loyalty' },
+    {
+      from: 'hotori',
+      to: 'kotori',
+      type: 'sibling',
+      note: 'Brothers, and never apart',
+    },
+    {
+      from: 'shandia-chief',
+      to: 'wiper',
+      type: 'influenced',
+      note: 'Told him the stories of Kalgara, and of the friend Kalgara kept ringing the bell for',
+    },
   ],
 };

@@ -26,6 +26,14 @@ export const punkHazard: Arc = {
     { id: 'uzu', name: 'Uzu', affiliation: 'Punk Hazard Children' },
     { id: 'doran', name: 'Doran', affiliation: 'Punk Hazard Children' },
     { id: 'biyo', name: 'Biyo', affiliation: 'Punk Hazard Children' },
+    {
+      id: 'yeti-cool-brothers',
+      name: 'Yeti Cool Brothers',
+      affiliation: "Caesar's Crew",
+    },
+    { id: 'yarisugi', name: 'Yarisugi', affiliation: 'Marines' },
+    { id: 'tamagon', name: 'Tamagon', affiliation: 'Franky Family' },
+    { id: 'kiev', name: 'Kiev', affiliation: 'Franky Family' },
   ],
   relations: [
     { from: 'monet', to: 'sugar', type: 'sibling', note: 'Older sister' },
@@ -76,5 +84,9 @@ export const punkHazard: Arc = {
       note: 'Took the children off the island and back to their parents',
     },
     { from: 'sanji', to: 'tashigi', type: 'saved' },
+    { from: 'yeti-cool-brothers', to: 'caesar', type: 'loyalty' },
+    { from: 'yarisugi', to: 'smoker', type: 'loyalty' },
+    { from: 'tamagon', to: 'zambai', type: 'loyalty' },
+    { from: 'kiev', to: 'zambai', type: 'loyalty' },
   ],
 };

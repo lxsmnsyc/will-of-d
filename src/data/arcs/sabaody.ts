@@ -64,6 +64,11 @@ export const sabaody: Arc = {
     { id: 'cosmos', name: 'Cosmos', affiliation: 'Kuja Pirates' },
     { id: 'bacura', name: 'Bacura', affiliation: 'Kuja Pirates' },
     { id: 'haredas', name: 'Haredas', affiliation: 'Weatheria' },
+    { id: 'macro', name: 'Macro', affiliation: 'Macro Pirates' },
+    { id: 'saru', name: 'Saru', affiliation: 'Rosward Family' },
+    { id: 'poppy', name: 'Poppy', affiliation: 'Kuja Tribe' },
+    { id: 'pansy', name: 'Pansy', affiliation: 'Kuja Tribe' },
+    { id: 'heracles', name: 'Heracles', affiliation: 'Boin Archipelago' },
   ],
   relations: [
     {
@@ -213,6 +218,27 @@ export const sabaody: Arc = {
       to: 'nami',
       type: 'taught',
       note: 'Two years of weather science on Weatheria, and endless patience',
+    },
+    {
+      from: 'macro',
+      to: 'fisher-tiger',
+      type: 'loyalty',
+      note: 'Sailed with the Sun Pirates before he went into the trade they freed him from',
+    },
+    { from: 'saru', to: 'rosward', type: 'loyalty' },
+    { from: 'poppy', to: 'hancock', type: 'loyalty' },
+    { from: 'pansy', to: 'hancock', type: 'loyalty' },
+    {
+      from: 'heracles',
+      to: 'usopp',
+      type: 'taught',
+      note: 'Two years of Pop Greens on the Boin Archipelago',
+    },
+    {
+      from: 'heracles',
+      to: 'usopp',
+      type: 'saved',
+      note: 'Pulled him out of the forest’s mouth more than once',
     },
   ],
 };
