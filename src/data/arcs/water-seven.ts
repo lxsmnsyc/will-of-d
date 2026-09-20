@@ -534,7 +534,7 @@ export const waterSeven: Arc = {
       from: 'robin',
       to: 'franky',
       type: 'friend',
-      note: 'He built her a ship after Enies Lobby, and she has never let him forget it',
+      note: 'The first person outside the crew willing to fight for her life, at Enies Lobby',
     },
   ],
 };

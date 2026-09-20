@@ -799,7 +799,7 @@ export const eastBlue: Arc = {
       from: 'zoro',
       to: 'sanji',
       type: 'friend',
-      note: 'Argue at every opportunity, and neither has ever had to be asked twice',
+      note: 'Fight over petty things at the worst moments, and have done since Arlong Park',
     },
     { from: 'nami', to: 'usopp', type: 'friend' },
     { from: 'nami', to: 'sanji', type: 'friend' },

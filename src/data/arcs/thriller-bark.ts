@@ -197,7 +197,7 @@ export const thrillerBark: Arc = {
       from: 'franky',
       to: 'brook',
       type: 'friend',
-      note: 'Joined a year apart and have been playing off each other since',
+      note: 'Threatened to shoot him over the skull jokes, then heard his story and respected his resolve',
     },
   ],
 };
