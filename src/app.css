@@ -154,11 +154,39 @@ body {
   max-width: 34ch;
 }
 
+.masthead-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 .masthead h1 {
   margin: 0;
   font-size: 15px;
   font-weight: 650;
   letter-spacing: -0.01em;
+}
+
+.source-link {
+  display: inline-flex;
+  color: var(--text-muted);
+  border-radius: 4px;
+}
+
+.source-link svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+.source-link:hover,
+.source-link:focus-visible {
+  color: var(--text-primary);
+}
+
+.source-link:focus-visible {
+  outline: 2px solid var(--kinship);
+  outline-offset: 2px;
 }
 
 .masthead p {

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.34.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +12,7 @@
     "lint:fix": "oxlint --type-aware --fix",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "deploy:pages": "pnpm build && pnpm dlx wrangler pages deploy"
+    "deploy:worker": "pnpm build && pnpm dlx wrangler deploy"
   },
   "dependencies": {
     "@solidjs/web": "2.0.0-rc.9",
@@ -34,5 +33,6 @@
     "sharp": "^0.35.4",
     "typescript": "^7.0.2",
     "vite": "^8.3.0"
-  }
+  },
+  "packageManager": "pnpm@10.34.4"
 }
