@@ -128,6 +128,7 @@ export const wano: Arc = {
     { id: 'joseph', name: 'Joseph', affiliation: 'CP0' },
     { id: 'guernica', name: 'Guernica', affiliation: 'CP0' },
     { id: 'maha', name: 'Maha', affiliation: 'CP0' },
+    { id: 'taka', name: 'O-Taka', affiliation: 'Hyogoro Family' },
   ],
   relations: [
     { from: 'sukiyaki', to: 'oden', type: 'parent' },
@@ -358,5 +359,12 @@ export const wano: Arc = {
     { from: 'joseph', to: 'lucci', type: 'loyalty' },
     { from: 'guernica', to: 'lucci', type: 'loyalty' },
     { from: 'maha', to: 'lucci', type: 'loyalty' },
+    {
+      from: 'luffy',
+      to: 'kid',
+      type: 'saved',
+      note: 'Freed him from the Prisoner Mine at Udon, Seastone cuffs and all',
+    },
+    { from: 'hyogoro', to: 'taka', type: 'romantic', note: 'His wife' },
   ],
 };

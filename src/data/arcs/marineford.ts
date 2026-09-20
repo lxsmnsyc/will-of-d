@@ -136,6 +136,7 @@ export const marineford: Arc = {
     { id: 'lacroix', name: 'Lacroix', affiliation: 'Marines' },
     { id: 'lonz', name: 'Lonz', affiliation: 'Marines' },
     { id: 'gorilla', name: 'Gorilla', affiliation: 'Marines' },
+    { id: 'minochihuahua', name: 'Minochihuahua', affiliation: 'Impel Down' },
   ],
   relations: [
     { from: 'roger', to: 'ace', type: 'parent' },
@@ -414,5 +415,6 @@ export const marineford: Arc = {
       type: 'loyalty',
       note: 'Walked the length of the bay through three Warlords to reach the scaffold',
     },
+    { from: 'minochihuahua', to: 'saldeath', type: 'loyalty' },
   ],
 };

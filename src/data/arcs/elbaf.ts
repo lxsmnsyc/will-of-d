@@ -316,9 +316,34 @@ export const elbaf: Arc = {
     { from: 'satchels-maffey', to: 'garling', type: 'loyalty' },
     {
       from: 'davy-d-jones',
-      to: 'eris',
+      to: 'rocks',
       type: 'parent',
-      note: 'Ancestor of the Davy line',
+      note: 'Ancestor; Rocks was born Davy D. Xebec',
     },
+    {
+      from: 'rocks',
+      to: 'teach',
+      type: 'parent',
+      note: 'His father, dead by the time the boy was two',
+    },
+    {
+      from: 'rocks',
+      to: 'harald',
+      type: 'friend',
+      note: 'One of only two people he trusted with the truth about his bloodline',
+    },
+    {
+      from: 'eris',
+      to: 'teach',
+      type: 'parent',
+      note: 'His mother, on God Valley',
+    },
+    {
+      from: 'eris',
+      to: 'teach',
+      type: 'saved',
+      note: 'Put herself between her son and the World Nobles',
+    },
+    { from: 'rocks', to: 'eris', type: 'romantic', note: 'His wife' },
   ],
 };

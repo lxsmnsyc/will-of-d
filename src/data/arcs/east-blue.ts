@@ -162,6 +162,7 @@ export const eastBlue: Arc = {
     { id: 'stainless', name: 'Stainless', affiliation: 'Marines' },
     { id: 'rockstar', name: 'Rockstar', affiliation: 'Red Hair Pirates' },
     { id: 'shu', name: 'Shu', affiliation: 'Marines' },
+    { id: 'nako', name: 'Nako', affiliation: 'Cocoyasi Village' },
   ],
   relations: [
     {
@@ -484,5 +485,12 @@ export const eastBlue: Arc = {
     { from: 'bogard', to: 'helmeppo', type: 'taught' },
     { from: 'rockstar', to: 'shanks', type: 'loyalty' },
     { from: 'shu', to: 'smoker', type: 'loyalty' },
+    {
+      from: 'nako',
+      to: 'nami',
+      type: 'influenced',
+      note: 'Looked after both sisters from the time they were small',
+    },
+    { from: 'nako', to: 'nojiko', type: 'influenced' },
   ],
 };

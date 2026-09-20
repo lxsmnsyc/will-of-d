@@ -119,6 +119,9 @@ export const dressrosa: Arc = {
     { id: 'sheepshead', name: 'Sheepshead', affiliation: 'Beasts Pirates' },
     { id: 'bobby-funk', name: 'Bobby Funk', affiliation: 'Mogaro Kingdom' },
     { id: 'kelly-funk', name: 'Kelly Funk', affiliation: 'Mogaro Kingdom' },
+    { id: 'columbus', name: 'Columbus', affiliation: 'Yonta Maria Fleet' },
+    { id: 'gaburu', name: 'Gaburu', affiliation: 'Revolutionary Army' },
+    { id: 'baburu', name: 'Baburu', affiliation: 'Revolutionary Army' },
   ],
   relations: [
     {
@@ -294,6 +297,14 @@ export const dressrosa: Arc = {
       to: 'kelly-funk',
       type: 'sibling',
       note: 'Brothers who fight as one man',
+    },
+    { from: 'columbus', to: 'orlumbus', type: 'loyalty' },
+    { from: 'baburu', to: 'gaburu', type: 'parent', note: 'Grandmother' },
+    {
+      from: 'baburu',
+      to: 'caribou',
+      type: 'saved',
+      note: 'Nursed a washed-up pirate back to health because he had her grandson\u2019s face',
     },
   ],
 };

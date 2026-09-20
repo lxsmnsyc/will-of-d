@@ -55,6 +55,11 @@ export const thrillerBark: Arc = {
     { id: 'cerberus', name: 'Cerberus', affiliation: 'Thriller Bark Pirates' },
     { id: 'inuppe', name: 'Inuppe', affiliation: 'Thriller Bark Pirates' },
     { id: 'kumashi', name: 'Kumashi', affiliation: 'Thriller Bark Pirates' },
+    {
+      id: 'hippo-gentleman',
+      name: 'Hippo Gentleman',
+      affiliation: 'Thriller Bark Pirates',
+    },
   ],
   relations: [
     { from: 'yorki', to: 'brook', type: 'influenced' },
@@ -93,5 +98,6 @@ export const thrillerBark: Arc = {
     { from: 'cerberus', to: 'moria', type: 'loyalty' },
     { from: 'inuppe', to: 'moria', type: 'loyalty' },
     { from: 'kumashi', to: 'perona', type: 'loyalty' },
+    { from: 'hippo-gentleman', to: 'moria', type: 'loyalty' },
   ],
 };

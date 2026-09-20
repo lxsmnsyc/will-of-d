@@ -65,6 +65,10 @@ export const skypiea: Arc = {
     { id: 'hotori', name: 'Hotori', affiliation: "God's Army" },
     { id: 'kotori', name: 'Kotori', affiliation: "God's Army" },
     { id: 'shandia-chief', name: 'Shandia Chief', affiliation: 'Shandia' },
+    { id: 'nola', name: 'Nola', affiliation: 'Shandora' },
+    { id: 'spacey', name: 'Spacey', affiliation: 'Automata' },
+    { id: 'cosmo', name: 'Cosmo', affiliation: 'Automata' },
+    { id: 'galaxy', name: 'Galaxy', affiliation: 'Automata' },
   ],
   relations: [
     { from: 'noland', to: 'cricket', type: 'parent', note: 'Ancestor' },
@@ -177,5 +181,17 @@ export const skypiea: Arc = {
       type: 'influenced',
       note: 'Told him the stories of Kalgara, and of the friend Kalgara kept ringing the bell for',
     },
+    {
+      from: 'nola',
+      to: 'kalgara',
+      type: 'friend',
+      note: 'Four hundred years of company, and a nightmare about losing him',
+    },
+    { from: 'nola', to: 'noland', type: 'friend' },
+    { from: 'nola', to: 'seto', type: 'friend' },
+    { from: 'nola', to: 'aisa', type: 'friend' },
+    { from: 'spacey', to: 'enel', type: 'loyalty' },
+    { from: 'cosmo', to: 'enel', type: 'loyalty' },
+    { from: 'galaxy', to: 'enel', type: 'loyalty' },
   ],
 };

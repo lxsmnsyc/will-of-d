@@ -80,6 +80,7 @@ export const waterSeven: Arc = {
       name: 'Tyrannosaurus',
       affiliation: 'Galley-La Company',
     },
+    { id: 'very-good', name: 'Very Good', affiliation: 'Marines' },
   ],
   relations: [
     { from: 'tom', to: 'franky', type: 'taught' },
@@ -235,5 +236,6 @@ export const waterSeven: Arc = {
     { from: 'nero', to: 'spandam', type: 'loyalty' },
     { from: 'baskerville', to: 'spandam', type: 'loyalty' },
     { from: 'tyrannosaurus', to: 'iceburg', type: 'loyalty' },
+    { from: 'very-good', to: 'sengoku', type: 'loyalty' },
   ],
 };
