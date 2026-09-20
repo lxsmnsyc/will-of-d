@@ -171,6 +171,18 @@ export const elbaf: Arc = {
       affiliation: 'Golden Lion Pirates',
       debut: 'Chapter 0',
     },
+    {
+      id: 'magnolia',
+      name: 'Magnolia',
+      affiliation: 'God Valley',
+      debut: 'Chapter 1158',
+    },
+    {
+      id: 'olav',
+      name: 'Olav',
+      affiliation: 'Walrus School',
+      debut: 'Chapter 1134',
+    },
   ],
   relations: [
     { from: 'harald', to: 'loki', type: 'parent' },
@@ -425,5 +437,15 @@ export const elbaf: Arc = {
     },
     { from: 'rocks', to: 'eris', type: 'romantic', note: 'His wife' },
     { from: 'indigo', to: 'shiki', type: 'loyalty' },
+    {
+      from: 'magnolia',
+      to: 'shanks',
+      type: 'parent',
+      note: 'Bore twins on God Valley and hoped they would get out',
+    },
+    { from: 'magnolia', to: 'shamrock', type: 'parent' },
+    { from: 'garling', to: 'magnolia', type: 'romantic' },
+    { from: 'oimo', to: 'olav', type: 'parent', note: 'Grandfather' },
+    { from: 'ripley', to: 'olav', type: 'taught' },
   ],
 };

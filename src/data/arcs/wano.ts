@@ -460,6 +460,18 @@ export const wano: Arc = {
       affiliation: 'Big Mom Pirates',
       debut: 'Chapter 1039',
     },
+    {
+      id: 'topakka',
+      name: 'Renona Topakka',
+      affiliation: 'Ryugu Kingdom',
+      debut: 'Chapter 963',
+    },
+    {
+      id: 'speed',
+      name: 'Speed',
+      affiliation: 'Beasts Pirates',
+      debut: 'Chapter 917',
+    },
   ],
   relations: [
     { from: 'sukiyaki', to: 'oden', type: 'parent' },
@@ -715,6 +727,18 @@ export const wano: Arc = {
       to: 'toko',
       type: 'friend',
       note: 'Took to her at the soba stand, and laughed at her joke',
+    },
+    {
+      from: 'topakka',
+      to: 'kawamatsu',
+      type: 'parent',
+      note: 'The mermaid who bore him',
+    },
+    {
+      from: 'speed',
+      to: 'otama',
+      type: 'loyalty',
+      note: 'Another of the Beasts Pirates a kibi dango turned around',
     },
   ],
 };

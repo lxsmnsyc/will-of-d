@@ -357,6 +357,12 @@ export const dressrosa: Arc = {
       affiliation: 'Mokomo Dukedom',
       debut: 'Chapter 795',
     },
+    {
+      id: 'grabar',
+      name: 'Grabar',
+      affiliation: 'Tontatta Tribe',
+      debut: 'Chapter 717',
+    },
   ],
   relations: [
     {
@@ -568,5 +574,6 @@ export const dressrosa: Arc = {
       type: 'saved',
       note: 'Broke the Hobi Hobi curse and gave a giant his body back',
     },
+    { from: 'grabar', to: 'leo', type: 'parent', note: 'Grandmother' },
   ],
 };

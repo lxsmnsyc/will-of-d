@@ -257,6 +257,12 @@ export const fishManIsland: Arc = {
       affiliation: 'Big Mom Pirates',
       debut: 'Chapter 651',
     },
+    {
+      id: 'nitro',
+      name: 'Nitro',
+      affiliation: 'Big Mom Pirates',
+      debut: 'Chapter 651',
+    },
   ],
   relations: [
     {
@@ -355,5 +361,6 @@ export const fishManIsland: Arc = {
       note: 'Fish-Man Karate, and the same dream of humans and fish-men getting along',
     },
     { from: 'jinbe', to: 'koala', type: 'friend' },
+    { from: 'nitro', to: 'pudding', type: 'loyalty' },
   ],
 };

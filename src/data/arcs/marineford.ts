@@ -335,6 +335,12 @@ export const marineford: Arc = {
       affiliation: 'Beasts Pirates',
       debut: 'Chapter 595',
     },
+    {
+      id: 'didit',
+      name: 'Didit',
+      affiliation: 'Goa Kingdom',
+      debut: 'Chapter 585',
+    },
   ],
   relations: [
     { from: 'roger', to: 'ace', type: 'parent' },
@@ -641,5 +647,8 @@ export const marineford: Arc = {
       type: 'friend',
       note: 'Met at Reverse Mountain fifty years ago, when the Rumbar Pirates still had a captain',
     },
+    { from: 'didit', to: 'sabo', type: 'parent' },
+    { from: 'didit', to: 'sterry', type: 'adopted' },
+    { from: 'outlook', to: 'didit', type: 'romantic' },
   ],
 };
