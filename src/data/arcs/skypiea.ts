@@ -33,6 +33,19 @@ export const skypiea: Arc = {
       epithet: 'Blackbeard',
       affiliation: 'Blackbeard Pirates',
     },
+    {
+      id: 'masira',
+      name: 'Masira',
+      epithet: 'the Salvage King',
+      affiliation: 'Saruyama Alliance',
+    },
+    {
+      id: 'shoujou',
+      name: 'Shoujou',
+      epithet: 'the Sea Rescue King',
+      affiliation: 'Saruyama Alliance',
+    },
+    { id: 'sarquiss', name: 'Sarquiss', affiliation: 'Bellamy Pirates' },
   ],
   relations: [
     { from: 'noland', to: 'cricket', type: 'parent', note: 'Ancestor' },
@@ -58,5 +71,28 @@ export const skypiea: Arc = {
       type: 'saved',
       note: 'Cured the tree fever the Shandia were dying of',
     },
+    {
+      from: 'masira',
+      to: 'shoujou',
+      type: 'sibling',
+      note: 'Sworn brothers, bonded over the same fairy tale',
+    },
+    {
+      from: 'cricket',
+      to: 'masira',
+      type: 'adopted',
+      note: 'The father figure the pair adopted for themselves',
+    },
+    { from: 'cricket', to: 'shoujou', type: 'adopted' },
+    { from: 'masira', to: 'cricket', type: 'loyalty' },
+    { from: 'shoujou', to: 'cricket', type: 'loyalty' },
+    {
+      from: 'noland',
+      to: 'masira',
+      type: 'influenced',
+      note: 'They believed the fairy tale everyone else laughed at',
+    },
+    { from: 'noland', to: 'shoujou', type: 'influenced' },
+    { from: 'sarquiss', to: 'bellamy', type: 'loyalty' },
   ],
 };
