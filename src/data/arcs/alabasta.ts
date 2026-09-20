@@ -11,6 +11,7 @@ export const alabasta: Arc = {
       affiliation: 'Alabasta Kingdom',
     },
     { id: 'cobra', name: 'Nefertari Cobra', affiliation: 'Alabasta Kingdom' },
+    { id: 'titi', name: 'Nefertari Titi', affiliation: 'Alabasta Kingdom' },
     { id: 'igaram', name: 'Igaram', affiliation: 'Alabasta Kingdom' },
     { id: 'pell', name: 'Pell', affiliation: 'Alabasta Kingdom' },
     { id: 'koza', name: 'Koza', affiliation: 'Alabasta Rebel Army' },
@@ -83,6 +84,8 @@ export const alabasta: Arc = {
   ],
   relations: [
     { from: 'cobra', to: 'vivi', type: 'parent' },
+    { from: 'titi', to: 'vivi', type: 'parent' },
+    { from: 'cobra', to: 'titi', type: 'romantic' },
     { from: 'igaram', to: 'vivi', type: 'influenced' },
     {
       from: 'pell',
