@@ -56,6 +56,7 @@ export const waterSeven: Arc = {
     { id: 'spandine', name: 'Spandine', affiliation: 'CP9' },
     { id: 'oimo', name: 'Oimo', affiliation: 'Giant Warrior Pirates' },
     { id: 'kashii', name: 'Kashii', affiliation: 'Giant Warrior Pirates' },
+    { id: 'funkfreed', name: 'Funkfreed', affiliation: 'CP0' },
   ],
   relations: [
     { from: 'tom', to: 'franky', type: 'taught' },
@@ -175,5 +176,6 @@ export const waterSeven: Arc = {
     { from: 'oimo', to: 'brogy', type: 'loyalty' },
     { from: 'kashii', to: 'dorry', type: 'loyalty' },
     { from: 'kashii', to: 'brogy', type: 'loyalty' },
+    { from: 'funkfreed', to: 'spandam', type: 'loyalty' },
   ],
 };

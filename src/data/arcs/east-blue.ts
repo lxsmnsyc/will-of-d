@@ -149,6 +149,14 @@ export const eastBlue: Arc = {
     { id: 'kuroobi', name: 'Kuroobi', affiliation: 'Arlong Pirates' },
     { id: 'chew', name: 'Chew', affiliation: 'Arlong Pirates' },
     { id: 'ipponmatsu', name: 'Ipponmatsu', affiliation: 'Loguetown' },
+    { id: 'fullbody', name: 'Fullbody', affiliation: 'Marines' },
+    { id: 'gaimon', name: 'Gaimon', affiliation: 'Island of Rare Animals' },
+    {
+      id: 'sarfunkel',
+      name: 'Sarfunkel',
+      affiliation: 'Island of Rare Animals',
+    },
+    { id: 'momoo', name: 'Momoo', affiliation: 'Arlong Pirates' },
   ],
   relations: [
     {
@@ -425,6 +433,38 @@ export const eastBlue: Arc = {
       to: 'buggy',
       type: 'friend',
       note: 'Co-captains of the Buggy and Alvida Alliance, and still together in Cross Guild',
+    },
+    {
+      from: 'fullbody',
+      to: 'jango',
+      type: 'saved',
+      note: 'Gave up his lieutenant\u2019s rank to get the charges against him dropped',
+    },
+    {
+      from: 'fullbody',
+      to: 'jango',
+      type: 'friend',
+      note: 'Two seaman recruits trailing the same captain ever since',
+    },
+    { from: 'fullbody', to: 'hina', type: 'loyalty' },
+    { from: 'jango', to: 'hina', type: 'loyalty' },
+    {
+      from: 'gaimon',
+      to: 'sarfunkel',
+      type: 'romantic',
+      note: 'Two people stuck in barrels, keeping each other company',
+    },
+    {
+      from: 'luffy',
+      to: 'gaimon',
+      type: 'friend',
+      note: 'Climbed the cliff to fetch treasure chests that turned out to be empty',
+    },
+    {
+      from: 'momoo',
+      to: 'hatchan',
+      type: 'loyalty',
+      note: 'Came whenever that trumpet of a voice called',
     },
   ],
 };
