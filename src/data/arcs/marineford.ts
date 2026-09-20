@@ -620,5 +620,26 @@ export const marineford: Arc = {
       type: 'influenced',
       note: 'Buggy wears his armband and has spent a career chasing his treasure',
     },
+    {
+      from: 'jinbe',
+      to: 'whitebeard',
+      type: 'friend',
+      note: 'Fish-Man Island was his territory, which is what kept it safe',
+    },
+    {
+      from: 'jinbe',
+      to: 'ace',
+      type: 'friend',
+      note: 'Five days of trying to kill each other, and deep respect after',
+    },
+    { from: 'jinbe', to: 'hancock', type: 'friend' },
+    { from: 'jinbe', to: 'rayleigh', type: 'friend' },
+    { from: 'jinbe', to: 'ivankov', type: 'friend' },
+    {
+      from: 'brook',
+      to: 'crocus',
+      type: 'friend',
+      note: 'Met at Reverse Mountain fifty years ago, when the Rumbar Pirates still had a captain',
+    },
   ],
 };

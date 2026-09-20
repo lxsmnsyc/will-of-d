@@ -708,5 +708,13 @@ export const wano: Arc = {
     },
     { from: 'hyogoro', to: 'taka', type: 'romantic', note: 'His wife' },
     { from: 'mountain-god', to: 'koyama', type: 'parent' },
+    { from: 'zoro', to: 'kiku', type: 'friend' },
+    { from: 'zoro', to: 'kawamatsu', type: 'friend' },
+    {
+      from: 'robin',
+      to: 'toko',
+      type: 'friend',
+      note: 'Took to her at the soba stand, and laughed at her joke',
+    },
   ],
 };

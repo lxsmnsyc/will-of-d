@@ -519,5 +519,22 @@ export const waterSeven: Arc = {
       type: 'friend',
       note: 'She trusted him with her daughter and stayed behind for the books',
     },
+    {
+      from: 'kokoro',
+      to: 'franky',
+      type: 'friend',
+      note: 'A matronly figure to Tom\u2019s two apprentices',
+    },
+    { from: 'zoro', to: 'franky', type: 'friend' },
+    { from: 'nami', to: 'franky', type: 'friend' },
+    { from: 'usopp', to: 'franky', type: 'friend' },
+    { from: 'sanji', to: 'franky', type: 'friend' },
+    { from: 'chopper', to: 'franky', type: 'friend' },
+    {
+      from: 'robin',
+      to: 'franky',
+      type: 'friend',
+      note: 'He built her a ship after Enies Lobby, and she has never let him forget it',
+    },
   ],
 };

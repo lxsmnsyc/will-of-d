@@ -187,5 +187,17 @@ export const thrillerBark: Arc = {
     { from: 'inuppe', to: 'moria', type: 'loyalty' },
     { from: 'kumashi', to: 'perona', type: 'loyalty' },
     { from: 'hippo-gentleman', to: 'moria', type: 'loyalty' },
+    { from: 'zoro', to: 'brook', type: 'friend' },
+    { from: 'nami', to: 'brook', type: 'friend' },
+    { from: 'usopp', to: 'brook', type: 'friend' },
+    { from: 'sanji', to: 'brook', type: 'friend' },
+    { from: 'chopper', to: 'brook', type: 'friend' },
+    { from: 'robin', to: 'brook', type: 'friend' },
+    {
+      from: 'franky',
+      to: 'brook',
+      type: 'friend',
+      note: 'Joined a year apart and have been playing off each other since',
+    },
   ],
 };

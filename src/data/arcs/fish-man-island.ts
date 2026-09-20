@@ -341,5 +341,19 @@ export const fishManIsland: Arc = {
     { from: 'chabo', to: 'nojiko', type: 'loyalty' },
     { from: 'maidy', to: 'vivi', type: 'loyalty' },
     { from: 'hakowan', to: 'wapol', type: 'loyalty' },
+    { from: 'nami', to: 'shirahoshi', type: 'friend' },
+    {
+      from: 'franky',
+      to: 'den',
+      type: 'friend',
+      note: 'Went looking for Tom\u2019s relatives the moment he reached the island',
+    },
+    {
+      from: 'jinbe',
+      to: 'hack',
+      type: 'friend',
+      note: 'Fish-Man Karate, and the same dream of humans and fish-men getting along',
+    },
+    { from: 'jinbe', to: 'koala', type: 'friend' },
   ],
 };

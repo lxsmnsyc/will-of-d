@@ -781,5 +781,28 @@ export const eastBlue: Arc = {
       type: 'influenced',
       note: 'Explained to a boy what a captain actually carries',
     },
+    {
+      from: 'zoro',
+      to: 'coby',
+      type: 'friend',
+      note: 'Afraid of him in Morgan\u2019s yard, and an admirer ever since',
+    },
+    {
+      from: 'nami',
+      to: 'hatchan',
+      type: 'friend',
+      note: 'The one Arlong Pirate she made her peace with',
+    },
+    { from: 'zoro', to: 'nami', type: 'friend' },
+    { from: 'zoro', to: 'usopp', type: 'friend' },
+    {
+      from: 'zoro',
+      to: 'sanji',
+      type: 'friend',
+      note: 'Argue at every opportunity, and neither has ever had to be asked twice',
+    },
+    { from: 'nami', to: 'usopp', type: 'friend' },
+    { from: 'nami', to: 'sanji', type: 'friend' },
+    { from: 'usopp', to: 'sanji', type: 'friend' },
   ],
 };

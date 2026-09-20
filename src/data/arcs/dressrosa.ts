@@ -561,5 +561,12 @@ export const dressrosa: Arc = {
       type: 'influenced',
       note: 'Every SMILE in the Beasts Pirates came through him',
     },
+    { from: 'zoro', to: 'bartolomeo', type: 'friend' },
+    {
+      from: 'usopp',
+      to: 'hajrudin',
+      type: 'saved',
+      note: 'Broke the Hobi Hobi curse and gave a giant his body back',
+    },
   ],
 };

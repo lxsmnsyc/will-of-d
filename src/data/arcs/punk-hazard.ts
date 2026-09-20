@@ -193,5 +193,7 @@ export const punkHazard: Arc = {
     { from: 'yarisugi', to: 'smoker', type: 'loyalty' },
     { from: 'tamagon', to: 'zambai', type: 'loyalty' },
     { from: 'kiev', to: 'zambai', type: 'loyalty' },
+    { from: 'zoro', to: 'kinemon', type: 'friend' },
+    { from: 'nami', to: 'kinemon', type: 'friend' },
   ],
 };

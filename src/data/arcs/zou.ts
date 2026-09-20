@@ -171,5 +171,7 @@ export const zou: Arc = {
     { from: 'ikkaku', to: 'law', type: 'loyalty' },
     { from: 'bariete', to: 'nekomamushi', type: 'loyalty' },
     { from: 'wany', to: 'wanda', type: 'loyalty' },
+    { from: 'zoro', to: 'raizo', type: 'friend' },
+    { from: 'chopper', to: 'milky', type: 'friend' },
   ],
 };
