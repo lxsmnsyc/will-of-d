@@ -142,5 +142,17 @@ export const egghead: Arc = {
       type: 'saved',
       note: 'Spent the knot, once and for all, so the next Joy Boy would get off Egghead alive',
     },
+    {
+      from: 'vegapunk',
+      to: 'judge',
+      type: 'friend',
+      note: 'Research partners at MADS, and the two who found the Lineage Factor together',
+    },
+    {
+      from: 'judge',
+      to: 'caesar',
+      type: 'friend',
+      note: 'Colleagues at MADS, and the pair who later built NEO MADS',
+    },
   ],
 };
