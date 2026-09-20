@@ -147,6 +147,7 @@ export const eastBlue: Arc = {
     { id: 'yosaku', name: 'Yosaku', affiliation: 'Bounty Hunters' },
     { id: 'kuroobi', name: 'Kuroobi', affiliation: 'Arlong Pirates' },
     { id: 'chew', name: 'Chew', affiliation: 'Arlong Pirates' },
+    { id: 'ipponmatsu', name: 'Ipponmatsu', affiliation: 'Loguetown' },
   ],
   relations: [
     {
@@ -389,5 +390,17 @@ export const eastBlue: Arc = {
     },
     { from: 'kuroobi', to: 'arlong', type: 'loyalty' },
     { from: 'chew', to: 'arlong', type: 'loyalty' },
+    {
+      from: 'ipponmatsu',
+      to: 'zoro',
+      type: 'influenced',
+      note: 'Gave away the family heirloom, reckoning he was handing over his dream with it',
+    },
+    {
+      from: 'zoro',
+      to: 'ipponmatsu',
+      type: 'influenced',
+      note: 'Rekindled an old shopkeeper\u2019s faith in real swordsmen',
+    },
   ],
 };
