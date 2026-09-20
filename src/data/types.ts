@@ -33,6 +33,12 @@ export interface Character {
   name: string;
   epithet?: string;
   affiliation: string;
+  /**
+   * First appearance, as the One Piece wiki records it — a chapter for most,
+   * an SBS volume for the handful Oda only ever answered a question about.
+   * Missing where the wiki gives no chapter at all.
+   */
+  debut?: string;
 }
 
 export interface Arc {

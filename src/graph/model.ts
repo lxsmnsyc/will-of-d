@@ -11,6 +11,8 @@ export interface GraphNode extends SimulationNodeDatum {
   epithet?: string;
   affiliation: string;
   arcTitle: string;
+  /** First appearance, where the wiki records one. */
+  debut?: string;
   /** Raw PageRank score over the reversed relation graph. */
   rank: number;
   /** Rank position, 1 being the most influential. */
@@ -132,6 +134,7 @@ export function buildGraph(): Graph {
       epithet: character.epithet,
       affiliation: character.affiliation,
       arcTitle: character.arcTitle,
+      debut: character.debut,
       rank,
       rankPosition: positions.get(character.id) ?? ids.length,
       weight,

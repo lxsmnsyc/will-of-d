@@ -129,7 +129,10 @@ export function DetailPanel(props: DetailPanelProps) {
             </div>
             <div class="panel-meta">
               <span class="chip">{current().affiliation}</span>
-              <span class="chip">First seen: {current().arcTitle}</span>
+              <span class="chip">
+                First seen: {current().arcTitle}
+                <Show when={current().debut}>{debut => <> · {debut()}</>}</Show>
+              </span>
               <span class="chip">
                 {current().degree}{' '}
                 {current().degree === 1 ? 'relation' : 'relations'}
