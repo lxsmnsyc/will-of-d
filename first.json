@@ -1,0 +1,814 @@
+[
+ {
+  "id": "rayleigh",
+  "name": "Silvers Rayleigh",
+  "epithet": "Dark King",
+  "affiliation": "Roger Pirates",
+  "file": "sabaody",
+  "ch": 19,
+  "want": "east-blue"
+ },
+ {
+  "id": "arlong",
+  "name": "Arlong",
+  "epithet": "Saw-Tooth",
+  "affiliation": "Arlong Pirates",
+  "file": "fish-man-island",
+  "ch": 69,
+  "want": "east-blue"
+ },
+ {
+  "id": "hatchan",
+  "name": "Hatchan",
+  "affiliation": "Takoyaki 8",
+  "file": "fish-man-island",
+  "ch": 69,
+  "want": "east-blue"
+ },
+ {
+  "id": "chabo",
+  "name": "Chabo",
+  "affiliation": "Cocoyasi Village",
+  "file": "fish-man-island",
+  "ch": 69,
+  "want": "east-blue"
+ },
+ {
+  "id": "bogard",
+  "name": "Bogard",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 92,
+  "want": "east-blue"
+ },
+ {
+  "id": "tashigi",
+  "name": "Tashigi",
+  "affiliation": "Marines",
+  "file": "dressrosa",
+  "ch": 96,
+  "want": "east-blue"
+ },
+ {
+  "id": "galdino",
+  "name": "Galdino",
+  "epithet": "Mr. 3",
+  "affiliation": "Cross Guild",
+  "file": "marineford",
+  "ch": 117,
+  "want": "alabasta"
+ },
+ {
+  "id": "raideen",
+  "name": "Raideen",
+  "affiliation": "Elbaf",
+  "file": "elbaf",
+  "ch": 129,
+  "want": "alabasta"
+ },
+ {
+  "id": "hina",
+  "name": "Hina",
+  "epithet": "Black Cage",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 171,
+  "want": "alabasta"
+ },
+ {
+  "id": "camie",
+  "name": "Camie",
+  "affiliation": "Takoyaki 8",
+  "file": "sabaody",
+  "ch": 195,
+  "want": "alabasta"
+ },
+ {
+  "id": "pappag",
+  "name": "Pappag",
+  "affiliation": "Takoyaki 8",
+  "file": "sabaody",
+  "ch": 195,
+  "want": "alabasta"
+ },
+ {
+  "id": "macro",
+  "name": "Macro",
+  "affiliation": "Macro Pirates",
+  "file": "sabaody",
+  "ch": 197,
+  "want": "alabasta"
+ },
+ {
+  "id": "maidy",
+  "name": "Maidy",
+  "affiliation": "Nefertari Family",
+  "file": "fish-man-island",
+  "ch": 215,
+  "want": "alabasta"
+ },
+ {
+  "id": "van-augur",
+  "name": "Van Augur",
+  "affiliation": "Blackbeard Pirates",
+  "file": "marineford",
+  "ch": 222,
+  "want": "skypiea"
+ },
+ {
+  "id": "burgess",
+  "name": "Jesus Burgess",
+  "affiliation": "Blackbeard Pirates",
+  "file": "marineford",
+  "ch": 222,
+  "want": "skypiea"
+ },
+ {
+  "id": "doc-q",
+  "name": "Doc Q",
+  "affiliation": "Blackbeard Pirates",
+  "file": "marineford",
+  "ch": 223,
+  "want": "skypiea"
+ },
+ {
+  "id": "stronger",
+  "name": "Stronger",
+  "affiliation": "Blackbeard Pirates",
+  "file": "egghead",
+  "ch": 223,
+  "want": "skypiea"
+ },
+ {
+  "id": "saturn",
+  "name": "Jaygarcia Saturn",
+  "affiliation": "Five Elders",
+  "file": "reverie",
+  "ch": 233,
+  "want": "skypiea"
+ },
+ {
+  "id": "mars",
+  "name": "Marcus Mars",
+  "affiliation": "Five Elders",
+  "file": "reverie",
+  "ch": 233,
+  "want": "skypiea"
+ },
+ {
+  "id": "warcury",
+  "name": "Topman Warcury",
+  "affiliation": "Five Elders",
+  "file": "reverie",
+  "ch": 233,
+  "want": "skypiea"
+ },
+ {
+  "id": "nusjuro",
+  "name": "Ethanbaron V. Nusjuro",
+  "affiliation": "Five Elders",
+  "file": "reverie",
+  "ch": 233,
+  "want": "skypiea"
+ },
+ {
+  "id": "jupeter",
+  "name": "Shepherd Ju Peter",
+  "affiliation": "Five Elders",
+  "file": "reverie",
+  "ch": 233,
+  "want": "skypiea"
+ },
+ {
+  "id": "rockstar",
+  "name": "Rockstar",
+  "affiliation": "Red Hair Pirates",
+  "file": "east-blue",
+  "ch": 234,
+  "want": "skypiea"
+ },
+ {
+  "id": "jozu",
+  "name": "Jozu",
+  "affiliation": "Whitebeard Pirates",
+  "file": "marineford",
+  "ch": 234,
+  "want": "skypiea"
+ },
+ {
+  "id": "sengoku",
+  "name": "Sengoku",
+  "epithet": "the Buddha",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 234,
+  "want": "skypiea"
+ },
+ {
+  "id": "laffitte",
+  "name": "Laffitte",
+  "affiliation": "Blackbeard Pirates",
+  "file": "marineford",
+  "ch": 234,
+  "want": "skypiea"
+ },
+ {
+  "id": "tsuru",
+  "name": "Tsuru",
+  "epithet": "Great Staff Officer",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 234,
+  "want": "skypiea"
+ },
+ {
+  "id": "hakowan",
+  "name": "Hakowan",
+  "affiliation": "Black Drum Kingdom",
+  "file": "fish-man-island",
+  "ch": 245,
+  "want": "skypiea"
+ },
+ {
+  "id": "kinderella",
+  "name": "Kinderella",
+  "affiliation": "Black Drum Kingdom",
+  "file": "reverie",
+  "ch": 261,
+  "want": "skypiea"
+ },
+ {
+  "id": "moda",
+  "name": "Moda",
+  "affiliation": "Revolutionary Army",
+  "file": "reverie",
+  "ch": 278,
+  "want": "skypiea"
+ },
+ {
+  "id": "davy-d-jones",
+  "name": "Davy D. Jones",
+  "affiliation": "Davy Family",
+  "file": "elbaf",
+  "ch": 306,
+  "want": "water-seven"
+ },
+ {
+  "id": "tamagon",
+  "name": "Tamagon",
+  "affiliation": "Franky Family",
+  "file": "punk-hazard",
+  "ch": 325,
+  "want": "water-seven"
+ },
+ {
+  "id": "kiev",
+  "name": "Kiev",
+  "affiliation": "Franky Family",
+  "file": "punk-hazard",
+  "ch": 325,
+  "want": "water-seven"
+ },
+ {
+  "id": "akainu",
+  "name": "Sakazuki",
+  "epithet": "Akainu",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 397,
+  "want": "water-seven"
+ },
+ {
+  "id": "momonga",
+  "name": "Momonga",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 420,
+  "want": "water-seven"
+ },
+ {
+  "id": "onigumo",
+  "name": "Onigumo",
+  "affiliation": "Marines",
+  "file": "marineford",
+  "ch": 420,
+  "want": "water-seven"
+ },
+ {
+  "id": "shu",
+  "name": "Shu",
+  "affiliation": "Marines",
+  "file": "east-blue",
+  "ch": 426,
+  "want": "water-seven"
+ },
+ {
+  "id": "spacey",
+  "name": "Spacey",
+  "affiliation": "Automata",
+  "file": "skypiea",
+  "ch": 433,
+  "want": "water-seven"
+ },
+ {
+  "id": "cosmo",
+  "name": "Cosmo",
+  "affiliation": "Automata",
+  "file": "skypiea",
+  "ch": 437,
+  "want": "water-seven"
+ },
+ {
+  "id": "galaxy",
+  "name": "Galaxy",
+  "affiliation": "Automata",
+  "file": "skypiea",
+  "ch": 437,
+  "want": "water-seven"
+ },
+ {
+  "id": "dadan",
+  "name": "Curly Dadan",
+  "affiliation": "Dadan Family",
+  "file": "marineford",
+  "ch": 440,
+  "want": "water-seven"
+ },
+ {
+  "id": "thatch",
+  "name": "Thatch",
+  "affiliation": "Whitebeard Pirates",
+  "file": "marineford",
+  "ch": 440,
+  "want": "water-seven"
+ },
+ {
+  "id": "john",
+  "name": "John",
+  "epithet": "Captain John",
+  "affiliation": "Rocks Pirates",
+  "file": "elbaf",
+  "ch": 450,
+  "want": "thriller-bark"
+ },
+ {
+  "id": "ganzui",
+  "name": "Ganzui",
+  "affiliation": "Rocks Pirates",
+  "file": "elbaf",
+  "ch": 450,
+  "want": "thriller-bark"
+ },
+ {
+  "id": "lola",
+  "name": "Charlotte Lola",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 476,
+  "want": "thriller-bark"
+ },
+ {
+  "id": "alice",
+  "name": "Alice",
+  "affiliation": "Galley-La Company",
+  "file": "water-seven",
+  "ch": 487,
+  "want": "thriller-bark"
+ },
+ {
+  "id": "shalria",
+  "name": "Rosward Shalria",
+  "affiliation": "World Nobles",
+  "file": "reverie",
+  "ch": 497,
+  "want": "sabaody"
+ },
+ {
+  "id": "bege",
+  "name": "Capone Bege",
+  "epithet": "Gang",
+  "affiliation": "Fire Tank Pirates",
+  "file": "whole-cake",
+  "ch": 498,
+  "want": "sabaody"
+ },
+ {
+  "id": "drake",
+  "name": "X Drake",
+  "affiliation": "SWORD",
+  "file": "wano",
+  "ch": 498,
+  "want": "sabaody"
+ },
+ {
+  "id": "charlos",
+  "name": "Rosward Charlos",
+  "affiliation": "World Nobles",
+  "file": "reverie",
+  "ch": 499,
+  "want": "sabaody"
+ },
+ {
+  "id": "stansen",
+  "name": "Stansen",
+  "affiliation": "New Giant Warrior Pirates",
+  "file": "elbaf",
+  "ch": 500,
+  "want": "sabaody"
+ },
+ {
+  "id": "fisher-tiger",
+  "name": "Fisher Tiger",
+  "affiliation": "Sun Pirates",
+  "file": "fish-man-island",
+  "ch": 521,
+  "want": "sabaody"
+ },
+ {
+  "id": "usakkov",
+  "name": "Usakkov",
+  "affiliation": "Kamabakka Kingdom",
+  "file": "egghead",
+  "ch": 537,
+  "want": "marineford"
+ },
+ {
+  "id": "gab",
+  "name": "Gab",
+  "affiliation": "Red Hair Pirates",
+  "file": "east-blue",
+  "ch": 580,
+  "want": "marineford"
+ },
+ {
+  "id": "karasu",
+  "name": "Karasu",
+  "affiliation": "Revolutionary Army",
+  "file": "reverie",
+  "ch": 593,
+  "want": "marineford"
+ },
+ {
+  "id": "scotch",
+  "name": "Scotch",
+  "affiliation": "Beasts Pirates",
+  "file": "wano",
+  "ch": 595,
+  "want": "marineford"
+ },
+ {
+  "id": "sarfunkel",
+  "name": "Sarfunkel",
+  "affiliation": "Island of Rare Animals",
+  "file": "east-blue",
+  "ch": 620,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "aladine",
+  "name": "Aladine",
+  "affiliation": "Sun Pirates",
+  "file": "whole-cake",
+  "ch": 620,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "mjosgard",
+  "name": "Donquixote Mjosgard",
+  "affiliation": "World Nobles",
+  "file": "reverie",
+  "ch": 625,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "joyboy",
+  "name": "Joy Boy",
+  "affiliation": "Void Century",
+  "file": "egghead",
+  "ch": 628,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "pudding",
+  "name": "Charlotte Pudding",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 651,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "pekoms",
+  "name": "Pekoms",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 651,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "napoleon",
+  "name": "Napoleon",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 651,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "bobbin",
+  "name": "Bobbin",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 651,
+  "want": "fish-man-island"
+ },
+ {
+  "id": "minochihuahua",
+  "name": "Minochihuahua",
+  "affiliation": "Impel Down",
+  "file": "marineford",
+  "ch": 662,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "vergo",
+  "name": "Vergo",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 671,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "baby-5",
+  "name": "Baby 5",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "sugar",
+  "name": "Sugar",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "gladius",
+  "name": "Gladius",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "machvise",
+  "name": "Machvise",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "lao-g",
+  "name": "Lao G",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "giolla",
+  "name": "Giolla",
+  "affiliation": "Donquixote Family",
+  "file": "dressrosa",
+  "ch": 682,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "baburu",
+  "name": "Baburu",
+  "affiliation": "Revolutionary Army",
+  "file": "dressrosa",
+  "ch": 690,
+  "want": "punk-hazard"
+ },
+ {
+  "id": "kanjuro",
+  "name": "Kurozumi Kanjuro",
+  "affiliation": "Kurozumi Family",
+  "file": "wano",
+  "ch": 700,
+  "want": "dressrosa"
+ },
+ {
+  "id": "joseph",
+  "name": "Joseph",
+  "affiliation": "CP0",
+  "file": "wano",
+  "ch": 705,
+  "want": "dressrosa"
+ },
+ {
+  "id": "hajrudin",
+  "name": "Hajrudin",
+  "affiliation": "Giant Warrior Pirates",
+  "file": "elbaf",
+  "ch": 706,
+  "want": "dressrosa"
+ },
+ {
+  "id": "tristan",
+  "name": "Tristan",
+  "affiliation": "Mokomo Dukedom",
+  "file": "zou",
+  "ch": 795,
+  "want": "dressrosa"
+ },
+ {
+  "id": "jack",
+  "name": "Jack",
+  "epithet": "the Drought",
+  "affiliation": "Beasts Pirates",
+  "file": "wano",
+  "ch": 801,
+  "want": "dressrosa"
+ },
+ {
+  "id": "buckingham",
+  "name": "Buckingham Stussy",
+  "affiliation": "Rocks Pirates",
+  "file": "egghead",
+  "ch": 802,
+  "want": "zou"
+ },
+ {
+  "id": "weevil",
+  "name": "Edward Weevil",
+  "affiliation": "Whitebeard Pirates",
+  "file": "elbaf",
+  "ch": 802,
+  "want": "zou"
+ },
+ {
+  "id": "vito",
+  "name": "Vito",
+  "affiliation": "Fire Tank Pirates",
+  "file": "whole-cake",
+  "ch": 812,
+  "want": "zou"
+ },
+ {
+  "id": "raizo",
+  "name": "Raizo",
+  "affiliation": "Nine Red Scabbards",
+  "file": "wano",
+  "ch": 817,
+  "want": "zou"
+ },
+ {
+  "id": "stussy",
+  "name": "Stussy",
+  "affiliation": "CP0",
+  "file": "egghead",
+  "ch": 860,
+  "want": "whole-cake"
+ },
+ {
+  "id": "jarul",
+  "name": "Jarul",
+  "affiliation": "Elbaf",
+  "file": "elbaf",
+  "ch": 866,
+  "want": "whole-cake"
+ },
+ {
+  "id": "gerd",
+  "name": "Gerd",
+  "affiliation": "New Giant Warrior Pirates",
+  "file": "elbaf",
+  "ch": 866,
+  "want": "whole-cake"
+ },
+ {
+  "id": "jorul",
+  "name": "Jorul",
+  "affiliation": "Elbaf",
+  "file": "elbaf",
+  "ch": 866,
+  "want": "whole-cake"
+ },
+ {
+  "id": "road",
+  "name": "Road",
+  "affiliation": "New Giant Warrior Pirates",
+  "file": "elbaf",
+  "ch": 898,
+  "want": "whole-cake"
+ },
+ {
+  "id": "goldberg",
+  "name": "Goldberg",
+  "affiliation": "New Giant Warrior Pirates",
+  "file": "elbaf",
+  "ch": 899,
+  "want": "whole-cake"
+ },
+ {
+  "id": "ryokugyu",
+  "name": "Aramaki",
+  "epithet": "Ryokugyu",
+  "affiliation": "Marines",
+  "file": "dressrosa",
+  "ch": 905,
+  "want": "reverie"
+ },
+ {
+  "id": "ahiru",
+  "name": "Ahiru",
+  "affiliation": "Revolutionary Army",
+  "file": "egghead",
+  "ch": 905,
+  "want": "reverie"
+ },
+ {
+  "id": "gambo",
+  "name": "Gambo",
+  "affiliation": "Revolutionary Army",
+  "file": "egghead",
+  "ch": 905,
+  "want": "reverie"
+ },
+ {
+  "id": "ushiano",
+  "name": "Ushiano",
+  "affiliation": "Revolutionary Army",
+  "file": "egghead",
+  "ch": 905,
+  "want": "reverie"
+ },
+ {
+  "id": "columbus",
+  "name": "Columbus",
+  "affiliation": "Yonta Maria Fleet",
+  "file": "dressrosa",
+  "ch": 906,
+  "want": "reverie"
+ },
+ {
+  "id": "shamrock",
+  "name": "Figarland Shamrock",
+  "affiliation": "God Knights",
+  "file": "elbaf",
+  "ch": 907,
+  "want": "reverie"
+ },
+ {
+  "id": "rocks",
+  "name": "Rocks D. Xebec",
+  "affiliation": "Rocks Pirates",
+  "file": "elbaf",
+  "ch": 957,
+  "want": "wano"
+ },
+ {
+  "id": "misery",
+  "name": "Misery",
+  "affiliation": "Big Mom Pirates",
+  "file": "whole-cake",
+  "ch": 1039,
+  "want": "wano"
+ },
+ {
+  "id": "colon",
+  "name": "Colon",
+  "affiliation": "Elbaf",
+  "file": "elbaf",
+  "ch": 1076,
+  "want": "egghead"
+ },
+ {
+  "id": "garling",
+  "name": "Figarland Garling",
+  "epithet": "Holy Knight",
+  "affiliation": "God Knights",
+  "file": "elbaf",
+  "ch": 1086,
+  "want": "egghead"
+ },
+ {
+  "id": "barbel",
+  "name": "Barbel",
+  "affiliation": "Rocks Pirates",
+  "file": "elbaf",
+  "ch": 1096,
+  "want": "egghead"
+ },
+ {
+  "id": "conney",
+  "name": "Conney",
+  "affiliation": "Sorbet Kingdom",
+  "file": "reverie",
+  "ch": 1099,
+  "want": "egghead"
+ }
+]

@@ -16,11 +16,6 @@ export const wholeCake: Arc = {
       name: 'Charlotte Katakuri',
       affiliation: 'Big Mom Pirates',
     },
-    {
-      id: 'pudding',
-      name: 'Charlotte Pudding',
-      affiliation: 'Big Mom Pirates',
-    },
     { id: 'carmel', name: 'Mother Carmel', affiliation: "Sheep's House" },
     { id: 'judge', name: 'Vinsmoke Judge', affiliation: 'Germa 66' },
     { id: 'sora', name: 'Vinsmoke Sora', affiliation: 'Germa 66' },
@@ -68,7 +63,6 @@ export const wholeCake: Arc = {
       name: 'Charlotte Chiffon',
       affiliation: 'Big Mom Pirates',
     },
-    { id: 'lola', name: 'Charlotte Lola', affiliation: 'Big Mom Pirates' },
     {
       id: 'mont-dor',
       name: 'Charlotte Mont-d\u2019Or',
@@ -83,13 +77,6 @@ export const wholeCake: Arc = {
     { id: 'flampe', name: 'Charlotte Flampe', affiliation: 'Big Mom Pirates' },
     { id: 'anana', name: 'Charlotte Anana', affiliation: 'Big Mom Pirates' },
     { id: 'pound', name: 'Pound', affiliation: 'Charlotte Family' },
-    {
-      id: 'bege',
-      name: 'Capone Bege',
-      epithet: 'Gang',
-      affiliation: 'Fire Tank Pirates',
-    },
-    { id: 'aladine', name: 'Aladine', affiliation: 'Sun Pirates' },
     {
       id: 'ichiji',
       name: 'Vinsmoke Ichiji',
@@ -110,7 +97,6 @@ export const wholeCake: Arc = {
     },
     { id: 'streusen', name: 'Streusen', affiliation: 'Big Mom Pirates' },
     { id: 'tamago', name: 'Baron Tamago', affiliation: 'Big Mom Pirates' },
-    { id: 'pekoms', name: 'Pekoms', affiliation: 'Big Mom Pirates' },
     { id: 'zepo', name: 'Zepo', affiliation: 'Nox Pirates' },
     {
       id: 'mascarpone',
@@ -129,7 +115,6 @@ export const wholeCake: Arc = {
     },
     { id: 'snack', name: 'Charlotte Snack', affiliation: 'Big Mom Pirates' },
     { id: 'pez', name: 'Capone Pez', affiliation: 'Fire Tank Pirates' },
-    { id: 'vito', name: 'Vito', affiliation: 'Fire Tank Pirates' },
     { id: 'gotti', name: 'Gotti', affiliation: 'Fire Tank Pirates' },
     {
       id: 'morgans',
@@ -140,7 +125,6 @@ export const wholeCake: Arc = {
     { id: 'cosette', name: 'Cosette', affiliation: 'Germa 66' },
     { id: 'zeus', name: 'Zeus', affiliation: 'Straw Hat Pirates' },
     { id: 'prometheus', name: 'Prometheus', affiliation: 'Big Mom Pirates' },
-    { id: 'napoleon', name: 'Napoleon', affiliation: 'Big Mom Pirates' },
     { id: 'randolph', name: 'Randolph', affiliation: 'Big Mom Pirates' },
     {
       id: 'akimeg',
@@ -407,12 +391,24 @@ export const wholeCake: Arc = {
       name: 'Charlotte Zuccotto',
       affiliation: 'Big Mom Pirates',
     },
-    { id: 'bobbin', name: 'Bobbin', affiliation: 'Big Mom Pirates' },
     { id: 'diesel', name: 'Diesel', affiliation: 'Big Mom Pirates' },
     { id: 'noble-croc', name: 'Noble Croc', affiliation: 'Big Mom Pirates' },
     { id: 'rabiyan', name: 'Rabiyan', affiliation: 'Big Mom Pirates' },
-    { id: 'misery', name: 'Misery', affiliation: 'Big Mom Pirates' },
     { id: 'kingbaum', name: 'Kingbaum', affiliation: 'Big Mom Pirates' },
+    { id: 'jarul', name: 'Jarul', affiliation: 'Elbaf' },
+    {
+      id: 'gerd',
+      name: 'Gerd',
+      affiliation: 'New Giant Warrior Pirates',
+    },
+    { id: 'jorul', name: 'Jorul', affiliation: 'Elbaf' },
+    { id: 'road', name: 'Road', affiliation: 'New Giant Warrior Pirates' },
+    {
+      id: 'goldberg',
+      name: 'Goldberg',
+      affiliation: 'New Giant Warrior Pirates',
+    },
+    { id: 'stussy', name: 'Stussy', affiliation: 'CP0' },
   ],
   relations: [
     { from: 'carmel', to: 'big-mom', type: 'adopted' },

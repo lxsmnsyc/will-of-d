@@ -2,7 +2,7 @@ import type { Arc } from '../types';
 
 export const dressrosa: Arc = {
   id: 'dressrosa',
-  title: 'Punk Hazard & Dressrosa',
+  title: 'Dressrosa',
   saga: 'Dressrosa',
   characters: [
     {
@@ -45,25 +45,15 @@ export const dressrosa: Arc = {
       epithet: 'White Hunter',
       affiliation: 'Marines',
     },
-    { id: 'tashigi', name: 'Tashigi', affiliation: 'Marines' },
     {
       id: 'fujitora',
       name: 'Issho',
       epithet: 'Fujitora',
       affiliation: 'Marines',
     },
-    {
-      id: 'ryokugyu',
-      name: 'Aramaki',
-      epithet: 'Ryokugyu',
-      affiliation: 'Marines',
-    },
     { id: 'trebol', name: 'Trebol', affiliation: 'Donquixote Family' },
     { id: 'diamante', name: 'Diamante', affiliation: 'Donquixote Family' },
     { id: 'pica', name: 'Pica', affiliation: 'Donquixote Family' },
-    { id: 'vergo', name: 'Vergo', affiliation: 'Donquixote Family' },
-    { id: 'baby-5', name: 'Baby 5', affiliation: 'Donquixote Family' },
-    { id: 'sugar', name: 'Sugar', affiliation: 'Donquixote Family' },
     {
       id: 'cavendish',
       name: 'Cavendish',
@@ -75,11 +65,7 @@ export const dressrosa: Arc = {
     { id: 'ideo', name: 'Ideo', affiliation: 'Ideo Pirates' },
     { id: 'leo', name: 'Leo', affiliation: 'Tontatta Tribe' },
     { id: 'orlumbus', name: 'Orlumbus', affiliation: 'Yonta Maria Fleet' },
-    { id: 'gladius', name: 'Gladius', affiliation: 'Donquixote Family' },
-    { id: 'machvise', name: 'Machvise', affiliation: 'Donquixote Family' },
-    { id: 'lao-g', name: 'Lao G', affiliation: 'Donquixote Family' },
     { id: 'dellinger', name: 'Dellinger', affiliation: 'Donquixote Family' },
-    { id: 'giolla', name: 'Giolla', affiliation: 'Donquixote Family' },
     {
       id: 'senor-pink',
       name: 'Senor Pink',
@@ -119,9 +105,17 @@ export const dressrosa: Arc = {
     { id: 'sheepshead', name: 'Sheepshead', affiliation: 'Beasts Pirates' },
     { id: 'bobby-funk', name: 'Bobby Funk', affiliation: 'Mogaro Kingdom' },
     { id: 'kelly-funk', name: 'Kelly Funk', affiliation: 'Mogaro Kingdom' },
-    { id: 'columbus', name: 'Columbus', affiliation: 'Yonta Maria Fleet' },
     { id: 'gaburu', name: 'Gaburu', affiliation: 'Revolutionary Army' },
-    { id: 'baburu', name: 'Baburu', affiliation: 'Revolutionary Army' },
+    { id: 'hajrudin', name: 'Hajrudin', affiliation: 'Giant Warrior Pirates' },
+    { id: 'kanjuro', name: 'Kurozumi Kanjuro', affiliation: 'Kurozumi Family' },
+    { id: 'joseph', name: 'Joseph', affiliation: 'CP0' },
+    {
+      id: 'jack',
+      name: 'Jack',
+      epithet: 'the Drought',
+      affiliation: 'Beasts Pirates',
+    },
+    { id: 'tristan', name: 'Tristan', affiliation: 'Mokomo Dukedom' },
   ],
   relations: [
     {

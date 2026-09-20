@@ -19,10 +19,17 @@ export const zou: Arc = {
     { id: 'blackback', name: 'Blackback', affiliation: 'Mokomo Dukedom' },
     { id: 'milky', name: 'Milky', affiliation: 'Mokomo Dukedom' },
     { id: 'miyagi', name: 'Miyagi', affiliation: 'Mokomo Dukedom' },
-    { id: 'tristan', name: 'Tristan', affiliation: 'Mokomo Dukedom' },
     { id: 'ikkaku', name: 'Ikkaku', affiliation: 'Heart Pirates' },
     { id: 'bariete', name: 'Bariete', affiliation: 'Mokomo Dukedom' },
     { id: 'wany', name: 'Wany', affiliation: 'Mokomo Dukedom' },
+    { id: 'weevil', name: 'Edward Weevil', affiliation: 'Whitebeard Pirates' },
+    {
+      id: 'buckingham',
+      name: 'Buckingham Stussy',
+      affiliation: 'Rocks Pirates',
+    },
+    { id: 'vito', name: 'Vito', affiliation: 'Fire Tank Pirates' },
+    { id: 'raizo', name: 'Raizo', affiliation: 'Nine Red Scabbards' },
   ],
   relations: [
     {

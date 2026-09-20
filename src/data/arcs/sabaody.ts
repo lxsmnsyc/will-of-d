@@ -5,12 +5,6 @@ export const sabaody: Arc = {
   title: 'Sabaody & Amazon Lily',
   saga: 'Summit War',
   characters: [
-    {
-      id: 'rayleigh',
-      name: 'Silvers Rayleigh',
-      epithet: 'Dark King',
-      affiliation: 'Roger Pirates',
-    },
     { id: 'shakky', name: 'Shakuyaku', affiliation: "Shakky's Rip-off Bar" },
     {
       id: 'hancock',
@@ -41,14 +35,12 @@ export const sabaody: Arc = {
     { id: 'kid', name: 'Eustass Kid', affiliation: 'Kid Pirates' },
     { id: 'killer', name: 'Killer', affiliation: 'Kid Pirates' },
     { id: 'bonney', name: 'Jewelry Bonney', affiliation: 'Bonney Pirates' },
-    { id: 'camie', name: 'Camie', affiliation: 'Takoyaki 8' },
     {
       id: 'kizaru',
       name: 'Borsalino',
       epithet: 'Kizaru',
       affiliation: 'Marines',
     },
-    { id: 'pappag', name: 'Pappag', affiliation: 'Takoyaki 8' },
     { id: 'duval', name: 'Duval', affiliation: 'Rosy Life Riders' },
     { id: 'sentomaru', name: 'Sentomaru', affiliation: 'Marines' },
     { id: 'marguerite', name: 'Marguerite', affiliation: 'Kuja Tribe' },
@@ -64,11 +56,25 @@ export const sabaody: Arc = {
     { id: 'cosmos', name: 'Cosmos', affiliation: 'Kuja Pirates' },
     { id: 'bacura', name: 'Bacura', affiliation: 'Kuja Pirates' },
     { id: 'haredas', name: 'Haredas', affiliation: 'Weatheria' },
-    { id: 'macro', name: 'Macro', affiliation: 'Macro Pirates' },
     { id: 'saru', name: 'Saru', affiliation: 'Rosward Family' },
     { id: 'poppy', name: 'Poppy', affiliation: 'Kuja Tribe' },
     { id: 'pansy', name: 'Pansy', affiliation: 'Kuja Tribe' },
     { id: 'heracles', name: 'Heracles', affiliation: 'Boin Archipelago' },
+    { id: 'fisher-tiger', name: 'Fisher Tiger', affiliation: 'Sun Pirates' },
+    {
+      id: 'stansen',
+      name: 'Stansen',
+      affiliation: 'New Giant Warrior Pirates',
+    },
+    { id: 'shalria', name: 'Rosward Shalria', affiliation: 'World Nobles' },
+    { id: 'charlos', name: 'Rosward Charlos', affiliation: 'World Nobles' },
+    {
+      id: 'bege',
+      name: 'Capone Bege',
+      epithet: 'Gang',
+      affiliation: 'Fire Tank Pirates',
+    },
+    { id: 'drake', name: 'X Drake', affiliation: 'SWORD' },
   ],
   relations: [
     {

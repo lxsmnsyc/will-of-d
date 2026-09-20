@@ -60,6 +60,15 @@ export const thrillerBark: Arc = {
       name: 'Hippo Gentleman',
       affiliation: 'Thriller Bark Pirates',
     },
+    {
+      id: 'john',
+      name: 'John',
+      epithet: 'Captain John',
+      affiliation: 'Rocks Pirates',
+    },
+    { id: 'ganzui', name: 'Ganzui', affiliation: 'Rocks Pirates' },
+    { id: 'lola', name: 'Charlotte Lola', affiliation: 'Big Mom Pirates' },
+    { id: 'alice', name: 'Alice', affiliation: 'Galley-La Company' },
   ],
   relations: [
     { from: 'yorki', to: 'brook', type: 'influenced' },

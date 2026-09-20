@@ -102,7 +102,6 @@ export const eastBlue: Arc = {
       affiliation: 'Red Hair Pirates',
     },
     { id: 'limejuice', name: 'Limejuice', affiliation: 'Red Hair Pirates' },
-    { id: 'gab', name: 'Gab', affiliation: 'Red Hair Pirates' },
     { id: 'woop-slap', name: 'Woop Slap', affiliation: 'Foosha Village' },
     {
       id: 'mohji',
@@ -151,18 +150,27 @@ export const eastBlue: Arc = {
     { id: 'ipponmatsu', name: 'Ipponmatsu', affiliation: 'Loguetown' },
     { id: 'fullbody', name: 'Fullbody', affiliation: 'Marines' },
     { id: 'gaimon', name: 'Gaimon', affiliation: 'Island of Rare Animals' },
-    {
-      id: 'sarfunkel',
-      name: 'Sarfunkel',
-      affiliation: 'Island of Rare Animals',
-    },
     { id: 'momoo', name: 'Momoo', affiliation: 'Arlong Pirates' },
     { id: 'brannew', name: 'Brannew', affiliation: 'Marines' },
     { id: 'john-giant', name: 'John Giant', affiliation: 'Marines' },
     { id: 'stainless', name: 'Stainless', affiliation: 'Marines' },
-    { id: 'rockstar', name: 'Rockstar', affiliation: 'Red Hair Pirates' },
-    { id: 'shu', name: 'Shu', affiliation: 'Marines' },
     { id: 'nako', name: 'Nako', affiliation: 'Cocoyasi Village' },
+    {
+      id: 'rayleigh',
+      name: 'Silvers Rayleigh',
+      epithet: 'Dark King',
+      affiliation: 'Roger Pirates',
+    },
+    {
+      id: 'arlong',
+      name: 'Arlong',
+      epithet: 'Saw-Tooth',
+      affiliation: 'Arlong Pirates',
+    },
+    { id: 'hatchan', name: 'Hatchan', affiliation: 'Takoyaki 8' },
+    { id: 'chabo', name: 'Chabo', affiliation: 'Cocoyasi Village' },
+    { id: 'bogard', name: 'Bogard', affiliation: 'Marines' },
+    { id: 'tashigi', name: 'Tashigi', affiliation: 'Marines' },
   ],
   relations: [
     {

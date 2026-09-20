@@ -102,6 +102,18 @@ export const alabasta: Arc = {
       affiliation: 'Super Spot-Billed Duck Squad',
     },
     { id: 'hasami', name: 'Hasami', affiliation: 'Ukkari Hot-Spring Island' },
+    { id: 'camie', name: 'Camie', affiliation: 'Takoyaki 8' },
+    { id: 'pappag', name: 'Pappag', affiliation: 'Takoyaki 8' },
+    { id: 'macro', name: 'Macro', affiliation: 'Macro Pirates' },
+    { id: 'maidy', name: 'Maidy', affiliation: 'Nefertari Family' },
+    {
+      id: 'galdino',
+      name: 'Galdino',
+      epithet: 'Mr. 3',
+      affiliation: 'Cross Guild',
+    },
+    { id: 'hina', name: 'Hina', epithet: 'Black Cage', affiliation: 'Marines' },
+    { id: 'raideen', name: 'Raideen', affiliation: 'Elbaf' },
   ],
   relations: [
     { from: 'cobra', to: 'vivi', type: 'parent' },
