@@ -210,23 +210,23 @@ export function GraphCanvas(props: GraphCanvasProps) {
         'link',
         forceLink<GraphNode, GraphLink>(scene.graph.links)
           .id(node => node.id)
-          .distance(link => 46 + link.source.radius + link.target.radius)
-          .strength(0.28),
+          .distance(link => 62 + link.source.radius + link.target.radius)
+          .strength(0.24),
       )
       .force(
         'charge',
         forceManyBody<GraphNode>()
-          .strength(node => -190 - node.radius * 13)
-          .distanceMax(1200),
+          .strength(node => -260 - node.radius * 16)
+          .distanceMax(1400),
       )
       .force(
         'collide',
         forceCollide<GraphNode>()
-          .radius(node => node.radius + 7)
+          .radius(node => node.radius + 11)
           .iterations(2),
       )
-      .force('x', forceX<GraphNode>(0).strength(0.045))
-      .force('y', forceY<GraphNode>(0).strength(0.055))
+      .force('x', forceX<GraphNode>(0).strength(0.04))
+      .force('y', forceY<GraphNode>(0).strength(0.05))
       .on('tick', schedule);
 
     zoomBehavior = zoom<HTMLCanvasElement, unknown>()

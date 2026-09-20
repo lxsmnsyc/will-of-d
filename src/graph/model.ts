@@ -45,7 +45,7 @@ export interface Graph {
 }
 
 const MIN_RADIUS = 8;
-const MAX_RADIUS = 64;
+const MAX_RADIUS = 128;
 
 export function buildGraph(): Graph {
   const ids = CHARACTERS.map(character => character.id);
@@ -76,7 +76,7 @@ export function buildGraph(): Graph {
   const maxRank = Math.max(...rankValues);
   const rankLogSpan = Math.log(maxRank / minRank) || 1;
   const maxDegree = Math.max(...ids.map(id => degree.get(id) ?? 0), 1);
-  const degreeLogSpan = Math.log1p(maxDegree) || 1;
+  const degreeRootSpan = Math.sqrt(maxDegree) || 1;
 
   const positions = new Map(
     [...ids]
@@ -84,20 +84,24 @@ export function buildGraph(): Graph {
       .map((id, i) => [id, i + 1]),
   );
 
-  // Both measures are long-tailed, so compare them on a log scale or the whole
-  // cast collapses into one small size next to Luffy. Connection count leads:
-  // PageRank on a graph this sparse hands a huge score to anyone sitting
-  // upstream of a busy character, which would size Ace's mother like a Yonko.
+  // Square root, so a node's area rather than its width tracks its connection
+  // count. A log scale was too flat at the top: Luffy has twice the connections
+  // of Whitebeard and log put them within a couple of pixels of each other.
+  // Connection count leads: PageRank on a graph this sparse hands a huge score
+  // to anyone sitting upstream of a busy character, which would size Ace's
+  // mother like a Yonko.
   const scoreOf = (id: string) => {
     const rank = ranks.get(id) ?? minRank;
     const rankShare = Math.log(rank / minRank) / rankLogSpan;
-    const degreeShare = Math.log1p(degree.get(id) ?? 0) / degreeLogSpan;
+    const degreeShare = Math.sqrt(degree.get(id) ?? 0) / degreeRootSpan;
     return 0.78 * degreeShare + 0.22 * rankShare;
   };
 
   const scores = new Map(ids.map(id => [id, scoreOf(id)]));
-  // Ranking the scores spreads the sizes evenly across the cast; mixing the
-  // raw score back in keeps the real gap between Luffy and everyone else.
+  // Ranking the scores spreads the sizes evenly across the cast, but three
+  // quarters of the cast sit on four connections or fewer, so leaning on it
+  // hands most of the radius band to the tail. Keep it as a minority term:
+  // enough to separate one bond from three, not enough to flatten the top.
   const ordered = [...ids].sort(
     (a, b) => (scores.get(a) ?? 0) - (scores.get(b) ?? 0),
   );
@@ -108,8 +112,8 @@ export function buildGraph(): Graph {
   const nodes: GraphNode[] = CHARACTERS.map(character => {
     const rank = ranks.get(character.id) ?? 0;
     const weight =
-      0.55 * (percentile.get(character.id) ?? 0) +
-      0.45 * (scores.get(character.id) ?? 0);
+      0.3 * (percentile.get(character.id) ?? 0) +
+      0.7 * (scores.get(character.id) ?? 0);
     return {
       id: character.id,
       name: character.name,
