@@ -6,6 +6,10 @@ export const zou: Arc = {
   saga: 'Whole Cake Island',
   characters: [
     { id: 'zunesha', name: 'Zunesha', affiliation: 'Zou' },
+    { id: 'nekomamushi', name: 'Nekomamushi', affiliation: 'Mokomo Dukedom' },
+    { id: 'inuarashi', name: 'Inuarashi', affiliation: 'Mokomo Dukedom' },
+    { id: 'carrot', name: 'Carrot', affiliation: 'Mokomo Dukedom' },
+    { id: 'pedro', name: 'Pedro', affiliation: 'Guardians of Zou' },
     { id: 'wanda', name: 'Wanda', affiliation: 'Mokomo Dukedom' },
     { id: 'shishilian', name: 'Shishilian', affiliation: 'Mokomo Dukedom' },
     { id: 'giovanni', name: 'Giovanni', affiliation: 'Mokomo Dukedom' },
