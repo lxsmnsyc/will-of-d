@@ -23,6 +23,16 @@ export const waterSeven: Arc = {
       affiliation: 'Blackbeard Pirates',
     },
     { id: 'lucci', name: 'Rob Lucci', affiliation: 'CP0' },
+    { id: 'tonjit', name: 'Tonjit', affiliation: 'Long Ring Long Land' },
+    { id: 'shelly', name: 'Shelly', affiliation: 'Long Ring Long Land' },
+    {
+      id: 'foxy',
+      name: 'Foxy',
+      epithet: 'the Silver Fox',
+      affiliation: 'Foxy Pirates',
+    },
+    { id: 'porche', name: 'Porche', affiliation: 'Foxy Pirates' },
+    { id: 'hamburg', name: 'Hamburg', affiliation: 'Foxy Pirates' },
   ],
   relations: [
     { from: 'tom', to: 'franky', type: 'taught' },
@@ -66,5 +76,14 @@ export const waterSeven: Arc = {
     { from: 'franky', to: 'tom', type: 'loyalty' },
     { from: 'iceburg', to: 'tom', type: 'loyalty' },
     { from: 'franky', to: 'luffy', type: 'loyalty' },
+    {
+      from: 'shelly',
+      to: 'tonjit',
+      type: 'loyalty',
+      note: 'Stayed behind for ten years while his tribe moved on without him',
+    },
+    { from: 'luffy', to: 'tonjit', type: 'saved' },
+    { from: 'porche', to: 'foxy', type: 'loyalty' },
+    { from: 'hamburg', to: 'foxy', type: 'loyalty' },
   ],
 };
