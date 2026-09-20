@@ -13,6 +13,10 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
+# The preview image keeps its name when it is replaced, so hold it for a day.
+/og.jpg
+  Cache-Control: public, max-age=86400
+
 # Applied to every response. The page itself loads nothing from another origin.
 # The two Cloudflare hosts are there for Web Analytics: the beacon is served from
 # static.cloudflareinsights.com and posts to cloudflareinsights.com. Drop both
