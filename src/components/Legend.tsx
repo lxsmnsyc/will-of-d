@@ -17,12 +17,13 @@ const LABELS: Record<RelationType, string> = {
   influenced: 'influenced',
   saved: 'saved',
   loyalty: 'sworn to',
+  friend: 'friend of',
 };
 
 const FAMILIES: { family: RelationFamily; types: RelationType[] }[] = [
   { family: 'kinship', types: ['parent', 'adopted', 'sibling', 'romantic'] },
   { family: 'mentorship', types: ['taught', 'influenced'] },
-  { family: 'devotion', types: ['saved', 'loyalty'] },
+  { family: 'devotion', types: ['saved', 'loyalty', 'friend'] },
 ];
 
 const DASH_ARRAY: Record<string, string> = {

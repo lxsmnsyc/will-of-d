@@ -344,18 +344,8 @@ export const eastBlue: Arc = {
       type: 'influenced',
       note: 'The first person who ever showed him kindness',
     },
-    {
-      from: 'johnny',
-      to: 'zoro',
-      type: 'loyalty',
-      note: 'Bounty-hunting partners long before the Straw Hats',
-    },
-    {
-      from: 'yosaku',
-      to: 'zoro',
-      type: 'loyalty',
-      note: 'Bounty-hunting partners long before the Straw Hats',
-    },
+    { from: 'johnny', to: 'zoro', type: 'friend' },
+    { from: 'yosaku', to: 'zoro', type: 'friend' },
     {
       from: 'nami',
       to: 'yosaku',

@@ -6,9 +6,15 @@ export type RelationType =
   | 'taught'
   | 'influenced'
   | 'saved'
-  | 'loyalty';
+  | 'loyalty'
+  | 'friend';
 
 /**
+ * Within a colour family, the dash pattern separates one type from another and
+ * the arrowhead separates a directed relation from a symmetric one: `parent`
+ * and `sibling` are both solid, and only `parent` carries an arrow, exactly as
+ * `saved` and `friend` do.
+ *
  * Relations point from the character who gives to the character who receives.
  * The parent, the adopter, the teacher, the influence and the rescuer are
  * always `from`. Loyalty follows the same rule — the retainer gives it — which
@@ -124,6 +130,14 @@ export const RELATION_STYLES: Record<RelationType, RelationStyle> = {
     directed: true,
     credits: 'target',
   },
+  friend: {
+    family: 'devotion',
+    label: 'is a friend of',
+    inverseLabel: 'is a friend of',
+    dash: 'solid',
+    directed: false,
+    credits: 'both',
+  },
 };
 
 export const RELATION_ORDER: RelationType[] = [
@@ -135,6 +149,7 @@ export const RELATION_ORDER: RelationType[] = [
   'influenced',
   'saved',
   'loyalty',
+  'friend',
 ];
 
 export const FAMILY_LABELS: Record<RelationFamily, string> = {

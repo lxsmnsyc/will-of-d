@@ -6,11 +6,14 @@ Every relation points from the character who gave to the character who received:
 parent, the adopter, the teacher, the influence and the rescuer are always the source of
 the arrow. Loyalty follows the same rule, since the retainer is the one who gives it, and
 it is therefore the one type whose importance flows to the target rather than the source.
-Partnerships are symmetric, so they are drawn without an arrowhead and the authored
-direction means nothing.
+Partnership, siblinghood and friendship are symmetric, so they are drawn without an
+arrowhead and the authored direction means nothing.
 
-The seven types are grouped into three colour families — kinship, legacy and devotion —
-and separated inside a family by line style, so identity never rests on colour alone. Only
+The nine types are grouped into three colour families — kinship, legacy and devotion.
+Inside a family the dash pattern separates one type from another and the arrowhead
+separates a directed relation from a symmetric one, so `parent` and `sibling` are both
+solid and only `parent` carries an arrow, exactly as `saved` and `friend` do. Identity
+never rests on colour alone. Only
 three hues clear the colour-blindness and contrast gates for a graph, where any two marks
 can end up adjacent; a fourth fails in dark mode, which is why line style carries the rest
 of the load.
