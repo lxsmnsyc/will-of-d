@@ -494,7 +494,7 @@ body {
   color: var(--mentorship);
 }
 
-.relation-dot[data-family='rescue'] {
+.relation-dot[data-family='devotion'] {
   color: var(--devotion);
 }
 

@@ -90,20 +90,40 @@ function drawArrow(
 ): void {
   if (!RELATION_STYLES[link.type].directed) return;
 
+  const sx = link.source.x ?? 0;
+  const sy = link.source.y ?? 0;
   const tx = link.target.x ?? 0;
   const ty = link.target.y ?? 0;
   const { cx, cy } = control(link);
 
-  // Tangent at the end of a quadratic is the vector from the control point.
-  let dx = tx - cx;
-  let dy = ty - cy;
+  // Walking back from the centre along the end tangent only lands on the
+  // curve when the edge is straight; on a bowed one it drifts sideways. Find
+  // where the curve actually crosses the target's circle instead. The
+  // distance to the target falls away monotonically as t nears 1, so bisect.
+  const gap = link.target.radius + 2.5 / scale;
+  let lo = 0;
+  let hi = 1;
+  for (let i = 0; i < 18; i += 1) {
+    const mid = (lo + hi) / 2;
+    const u = 1 - mid;
+    const px = u * u * sx + 2 * u * mid * cx + mid * mid * tx;
+    const py = u * u * sy + 2 * u * mid * cy + mid * mid * ty;
+    if (Math.hypot(px - tx, py - ty) > gap) lo = mid;
+    else hi = mid;
+  }
+
+  const t = (lo + hi) / 2;
+  const u = 1 - t;
+  const tipX = u * u * sx + 2 * u * t * cx + t * t * tx;
+  const tipY = u * u * sy + 2 * u * t * cy + t * t * ty;
+
+  // Tangent of the quadratic at that same point.
+  let dx = 2 * u * (cx - sx) + 2 * t * (tx - cx);
+  let dy = 2 * u * (cy - sy) + 2 * t * (ty - cy);
   const length = Math.hypot(dx, dy) || 1;
   dx /= length;
   dy /= length;
 
-  const gap = link.target.radius + 2.5 / scale;
-  const tipX = tx - dx * gap;
-  const tipY = ty - dy * gap;
   const size = (lit ? 9 : 7) / scale;
 
   ctx.beginPath();

@@ -118,7 +118,7 @@ export const sabaody: Arc = {
       from: 'bonney',
       to: 'zoro',
       type: 'saved',
-      note: 'Her crew found him where Kuma dropped him',
+      note: 'Faked his death before he could finish swinging at a Celestial Dragon',
     },
     {
       from: 'mihawk',

@@ -62,8 +62,17 @@ function collect(): {
     }
   }
 
+  const pairs = new Set<string>();
+
   for (const arc of ARCS) {
     for (const relation of arc.relations) {
+      const key = `${relation.from}>${relation.to}:${relation.type}`;
+      if (pairs.has(key)) {
+        throw new Error(
+          `Duplicate relation "${key}" repeated in arc "${arc.id}"`,
+        );
+      }
+      pairs.add(key);
       if (!seen.has(relation.from)) {
         throw new Error(
           `Relation in arc "${arc.id}" points from unknown id "${relation.from}"`,

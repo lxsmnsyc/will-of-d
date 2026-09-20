@@ -35,12 +35,6 @@ export const egghead: Arc = {
     { from: 'vegapunk', to: 'franky', type: 'influenced' },
     { from: 'vegapunk', to: 'kuma', type: 'influenced' },
     { from: 'clover', to: 'vegapunk', type: 'influenced' },
-    {
-      from: 'saul',
-      to: 'robin',
-      type: 'influenced',
-      note: 'Reunited on Egghead',
-    },
     { from: 'bonney', to: 'luffy', type: 'influenced' },
     {
       from: 'kuma',

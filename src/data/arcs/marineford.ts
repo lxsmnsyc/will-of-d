@@ -109,6 +109,9 @@ export const marineford: Arc = {
     { id: 'sadi', name: 'Sadi', affiliation: 'Impel Down' },
     { id: 'saldeath', name: 'Saldeath', affiliation: 'Impel Down' },
     { id: 'squard', name: 'Squard', affiliation: 'Whitebeard Pirates' },
+    { id: 'sterry', name: 'Sterry', affiliation: 'Goa Kingdom' },
+    { id: 'dogra', name: 'Dogra', affiliation: 'Dadan Family' },
+    { id: 'magra', name: 'Magra', affiliation: 'Dadan Family' },
   ],
   relations: [
     { from: 'roger', to: 'ace', type: 'parent' },
@@ -312,5 +315,15 @@ export const marineford: Arc = {
       type: 'influenced',
       note: 'Told him not to hold children to account for their fathers\u2019 sins',
     },
+    { from: 'outlook', to: 'sterry', type: 'adopted' },
+    { from: 'sabo', to: 'sterry', type: 'sibling', note: 'Step-brothers' },
+    {
+      from: 'dadan',
+      to: 'ace',
+      type: 'saved',
+      note: 'Went into Bluejam after both boys, axe first',
+    },
+    { from: 'dogra', to: 'dadan', type: 'loyalty' },
+    { from: 'magra', to: 'dadan', type: 'loyalty' },
   ],
 };
