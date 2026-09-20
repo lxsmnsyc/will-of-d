@@ -106,6 +106,8 @@ export const dressrosa: Arc = {
     { id: 'hack', name: 'Hack', affiliation: 'Revolutionary Army' },
     { id: 'gatz', name: 'Gatz', affiliation: 'Corrida Colosseum' },
     { id: 'barrels', name: 'Diez Barrels', affiliation: 'Barrels Pirates' },
+    { id: 'lami', name: 'Trafalgar Lami', affiliation: 'Flevance' },
+    { id: 'maynard', name: 'Maynard', affiliation: 'Marines' },
   ],
   relations: [
     {
@@ -245,6 +247,27 @@ export const dressrosa: Arc = {
       to: 'drake',
       type: 'influenced',
       note: 'A boy who wanted to be the Marine officer his father had been',
+    },
+    { from: 'law', to: 'lami', type: 'sibling', note: 'Younger sister' },
+    {
+      from: 'noland',
+      to: 'gancho',
+      type: 'influenced',
+      note: 'Four hundred years on, the dwarves still keep his statue',
+    },
+    { from: 'noland', to: 'leo', type: 'influenced' },
+    {
+      from: 'leo',
+      to: 'usopp',
+      type: 'loyalty',
+      note: 'Took him for Noland\u2019s descendant and followed him anyway',
+    },
+    { from: 'maynard', to: 'akainu', type: 'loyalty' },
+    {
+      from: 'elizabello',
+      to: 'riku',
+      type: 'friend',
+      note: 'An old friend of Dressrosa, who had helped Prodence more times than he could count',
     },
   ],
 };

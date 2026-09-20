@@ -85,6 +85,7 @@ export const elbaf: Arc = {
       affiliation: 'God Knights',
     },
     { id: 'gram', name: 'Polo Gram', affiliation: 'Polo Pirates' },
+    { id: 'jorul', name: 'Jorul', affiliation: 'Elbaf' },
   ],
   relations: [
     { from: 'harald', to: 'loki', type: 'parent' },
@@ -260,6 +261,21 @@ export const elbaf: Arc = {
       to: 'gram',
       type: 'friend',
       note: 'Sailed as partners once both had left Rocks behind',
+    },
+    {
+      from: 'jorul',
+      to: 'dorry',
+      type: 'influenced',
+      note: 'The other half of the pair who handed the name on',
+    },
+    { from: 'jorul', to: 'brogy', type: 'influenced' },
+    { from: 'dorry', to: 'jorul', type: 'loyalty' },
+    { from: 'brogy', to: 'jorul', type: 'loyalty' },
+    {
+      from: 'jorul',
+      to: 'jarul',
+      type: 'friend',
+      note: 'Three centuries of standing beside each other',
     },
   ],
 };

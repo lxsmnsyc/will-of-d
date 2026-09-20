@@ -157,6 +157,9 @@ export const eastBlue: Arc = {
       affiliation: 'Island of Rare Animals',
     },
     { id: 'momoo', name: 'Momoo', affiliation: 'Arlong Pirates' },
+    { id: 'brannew', name: 'Brannew', affiliation: 'Marines' },
+    { id: 'john-giant', name: 'John Giant', affiliation: 'Marines' },
+    { id: 'stainless', name: 'Stainless', affiliation: 'Marines' },
   ],
   relations: [
     {
@@ -466,5 +469,9 @@ export const eastBlue: Arc = {
       type: 'loyalty',
       note: 'Came whenever that trumpet of a voice called',
     },
+    { from: 'brannew', to: 'sengoku', type: 'loyalty' },
+    { from: 'john-giant', to: 'sengoku', type: 'loyalty' },
+    { from: 'stainless', to: 'sengoku', type: 'loyalty' },
+    { from: 'garp', to: 'luffy', type: 'taught' },
   ],
 };

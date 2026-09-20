@@ -27,6 +27,12 @@ export const egghead: Arc = {
     { id: 'pythagoras', name: 'Pythagoras', affiliation: 'Egghead' },
     { id: 'atlas', name: 'Atlas', affiliation: 'Egghead' },
     { id: 'york', name: 'York', affiliation: 'Egghead' },
+    {
+      id: 'lili',
+      name: 'Nefertari D. Lili',
+      affiliation: 'Arabasta Kingdom',
+    },
+    { id: 'hibari', name: 'Hibari', affiliation: 'SWORD' },
   ],
   relations: [
     {
@@ -167,5 +173,12 @@ export const egghead: Arc = {
       type: 'saved',
       note: 'The one Vegapunk who got off the island, and the one who told him that counted',
     },
+    {
+      from: 'lili',
+      to: 'cobra',
+      type: 'parent',
+      note: 'Ancestor, eight hundred years back, and the queen who stayed behind',
+    },
+    { from: 'hibari', to: 'akainu', type: 'loyalty' },
   ],
 };

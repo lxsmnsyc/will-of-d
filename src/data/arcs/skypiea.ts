@@ -59,6 +59,7 @@ export const skypiea: Arc = {
     { id: 'shura', name: 'Shura', affiliation: 'Birka' },
     { id: 'satori', name: 'Satori', affiliation: 'Birka' },
     { id: 'gedatsu', name: 'Gedatsu', affiliation: 'Birka' },
+    { id: 'comil', name: 'Comil', affiliation: 'Marines' },
   ],
   relations: [
     { from: 'noland', to: 'cricket', type: 'parent', note: 'Ancestor' },
@@ -154,5 +155,6 @@ export const skypiea: Arc = {
     { from: 'shura', to: 'enel', type: 'loyalty' },
     { from: 'satori', to: 'enel', type: 'loyalty' },
     { from: 'gedatsu', to: 'enel', type: 'loyalty' },
+    { from: 'comil', to: 'sengoku', type: 'loyalty' },
   ],
 };

@@ -56,6 +56,14 @@ export const sabaody: Arc = {
     { id: 'aphelandra', name: 'Aphelandra', affiliation: 'Kuja Tribe' },
     { id: 'kikyo', name: 'Kikyo', affiliation: 'Kuja Tribe' },
     { id: 'salome', name: 'Salome', affiliation: 'Kuja Pirates' },
+    { id: 'belladonna', name: 'Belladonna', affiliation: 'Kuja Tribe' },
+    { id: 'enishida', name: 'Enishida', affiliation: 'Kuja Tribe' },
+    { id: 'ran', name: 'Ran', affiliation: 'Kuja Pirates' },
+    { id: 'daisy', name: 'Daisy', affiliation: 'Kuja Pirates' },
+    { id: 'rindo', name: 'Rindo', affiliation: 'Kuja Pirates' },
+    { id: 'cosmos', name: 'Cosmos', affiliation: 'Kuja Pirates' },
+    { id: 'bacura', name: 'Bacura', affiliation: 'Kuja Pirates' },
+    { id: 'haredas', name: 'Haredas', affiliation: 'Weatheria' },
   ],
   relations: [
     {
@@ -193,5 +201,18 @@ export const sabaody: Arc = {
       note: 'Took the collar off a World Noble\u2019s slave',
     },
     { from: 'jean-bart', to: 'law', type: 'loyalty' },
+    { from: 'belladonna', to: 'hancock', type: 'loyalty' },
+    { from: 'enishida', to: 'hancock', type: 'loyalty' },
+    { from: 'ran', to: 'hancock', type: 'loyalty' },
+    { from: 'daisy', to: 'hancock', type: 'loyalty' },
+    { from: 'rindo', to: 'hancock', type: 'loyalty' },
+    { from: 'cosmos', to: 'hancock', type: 'loyalty' },
+    { from: 'bacura', to: 'hancock', type: 'loyalty' },
+    {
+      from: 'haredas',
+      to: 'nami',
+      type: 'taught',
+      note: 'Two years of weather science on Weatheria, and endless patience',
+    },
   ],
 };
