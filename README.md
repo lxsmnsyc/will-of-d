@@ -29,7 +29,7 @@ the size of a Yonko.
 ```sh
 pnpm install
 pnpm dev        # http://localhost:3000
-pnpm build      # static site in dist/client
+pnpm build      # static site in dist/
 pnpm preview
 ```
 
@@ -37,21 +37,32 @@ pnpm preview
 
 ## Portraits
 
-`public/portraits/<id>.webp` holds a 128px square crop per character, fetched from the
-public AniList API by `scripts/fetch-portraits.mjs` and re-encoded with sharp (139 of 144
-characters, about 1 MB in total). Run it again after adding characters:
+`public/portraits/<id>.webp` holds a 128px square crop per character, re-encoded with
+sharp, 685 of 754 characters and about 4 MB in total. Two public APIs supply them, in
+order:
 
 ```sh
-node scripts/fetch-portraits.mjs
+node scripts/fetch-portraits.mjs      # AniList
+node scripts/fetch-portraits-mal.mjs  # MyAnimeList, for whoever AniList has no face for
 ```
 
-It rewrites `src/data/portraits.ts`, the generated set of ids that have a file, so the
-canvas never requests one that does not exist. Anyone without a portrait falls back to a
-monogram, on the canvas and in the panel alike, so a missing face costs nothing.
+AniList carries the cast the anime gave a credit to, which is most of the named characters
+and few of the minor ones; MyAnimeList lists about three times as many and fills the
+second half. The MyAnimeList pass only fetches characters with no file on disk, so
+AniList's art wins where both have one and a run after adding an arc costs only the new
+names. Pass ids to either to refetch and overwrite just those.
 
-The artwork remains the copyright of its rights holders; AniList only hosts it. This is a
-non-commercial fan visualisation. Swap the images or drop the folder if that does not suit
-your use.
+The One Piece wiki has a picture for nearly everyone still missing, but its image host
+answers scripts with a Cloudflare challenge, so those 69 keep their monogram.
+
+Both rewrite `src/data/portraits.ts` from the folder itself — the generated set of ids
+that have a file, so the canvas never requests one that does not exist. Anyone without a
+portrait falls back to a monogram, on the canvas and in the panel alike, so a missing face
+costs nothing.
+
+The artwork remains the copyright of its rights holders; AniList and MyAnimeList only
+host it. This is a non-commercial fan visualisation. Swap the images or drop the folder if
+that does not suit your use.
 
 ## Where the data comes from
 
