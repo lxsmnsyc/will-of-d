@@ -492,5 +492,11 @@ export const eastBlue: Arc = {
       note: 'Looked after both sisters from the time they were small',
     },
     { from: 'nako', to: 'nojiko', type: 'influenced' },
+    {
+      from: 'benn-beckman',
+      to: 'luffy',
+      type: 'influenced',
+      note: 'Explained to a boy what a captain actually carries',
+    },
   ],
 };

@@ -81,6 +81,7 @@ export const waterSeven: Arc = {
       affiliation: 'Galley-La Company',
     },
     { id: 'very-good', name: 'Very Good', affiliation: 'Marines' },
+    { id: 'laskey', name: 'Laskey', affiliation: 'CP9' },
   ],
   relations: [
     { from: 'tom', to: 'franky', type: 'taught' },
@@ -237,5 +238,14 @@ export const waterSeven: Arc = {
     { from: 'baskerville', to: 'spandam', type: 'loyalty' },
     { from: 'tyrannosaurus', to: 'iceburg', type: 'loyalty' },
     { from: 'very-good', to: 'sengoku', type: 'loyalty' },
+    { from: 'laskey', to: 'kalifa', type: 'parent' },
+    { from: 'laskey', to: 'alpha', type: 'parent' },
+    { from: 'laskey', to: 'spandam', type: 'loyalty' },
+    {
+      from: 'olvia',
+      to: 'saul',
+      type: 'friend',
+      note: 'She trusted him with her daughter and stayed behind for the books',
+    },
   ],
 };

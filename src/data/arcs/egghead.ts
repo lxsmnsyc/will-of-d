@@ -240,10 +240,21 @@ export const egghead: Arc = {
     { from: 'ratel', to: 'akainu', type: 'loyalty' },
     { from: 'red-king', to: 'akainu', type: 'loyalty' },
     { from: 'tosa', to: 'akainu', type: 'loyalty' },
-    { from: 'alpha', to: 'lucci', type: 'loyalty' },
+    {
+      from: 'alpha',
+      to: 'kalifa',
+      type: 'sibling',
+      note: 'Younger sister, and the family resemblance is the point',
+    },
     { from: 'stronger', to: 'teach', type: 'loyalty' },
     { from: 'usakkov', to: 'ivankov', type: 'loyalty' },
-    { from: 'bulldog', to: 'kuma', type: 'loyalty' },
+    {
+      from: 'bulldog',
+      to: 'kuma',
+      type: 'loyalty',
+      note: 'Ran Sorbet for him while Kuma wore the crown as a figurehead',
+    },
+    { from: 'conney', to: 'bulldog', type: 'parent' },
     {
       from: 'york',
       to: 'saturn',

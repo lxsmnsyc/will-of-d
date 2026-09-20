@@ -722,5 +722,7 @@ export const wholeCake: Arc = {
     { from: 'rabiyan', to: 'big-mom', type: 'loyalty' },
     { from: 'misery', to: 'big-mom', type: 'loyalty' },
     { from: 'kingbaum', to: 'big-mom', type: 'loyalty' },
+    { from: 'vito', to: 'gotti', type: 'friend' },
+    { from: 'gotti', to: 'chiffon', type: 'loyalty' },
   ],
 };

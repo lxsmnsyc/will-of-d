@@ -36,7 +36,7 @@ export const reverie: Arc = {
     { id: 'komane', name: 'Komane', affiliation: 'Lulusia Kingdom' },
     { id: 'seki', name: 'Seki', affiliation: 'Lulusia Kingdom' },
     { id: 'peachbeard', name: 'Peachbeard', affiliation: 'Blackbeard Pirates' },
-    { id: 'conney', name: 'Conney', affiliation: 'Ryugu Kingdom' },
+    { id: 'conney', name: 'Conney', affiliation: 'Sorbet Kingdom' },
   ],
   relations: [
     { from: 'saturn', to: 'imu', type: 'loyalty' },
@@ -103,7 +103,6 @@ export const reverie: Arc = {
     { from: 'morgans', to: 'wapol', type: 'saved' },
     { from: 'moda', to: 'dragon', type: 'loyalty' },
     { from: 'peachbeard', to: 'teach', type: 'loyalty' },
-    { from: 'conney', to: 'shirahoshi', type: 'loyalty' },
     { from: 'seki', to: 'komane', type: 'parent' },
     {
       from: 'rosward',

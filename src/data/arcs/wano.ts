@@ -129,6 +129,7 @@ export const wano: Arc = {
     { id: 'guernica', name: 'Guernica', affiliation: 'CP0' },
     { id: 'maha', name: 'Maha', affiliation: 'CP0' },
     { id: 'taka', name: 'O-Taka', affiliation: 'Hyogoro Family' },
+    { id: 'mountain-god', name: 'Mountain God', affiliation: 'Wano Country' },
   ],
   relations: [
     { from: 'sukiyaki', to: 'oden', type: 'parent' },
@@ -347,8 +348,18 @@ export const wano: Arc = {
     { from: 'zanki', to: 'kaido', type: 'loyalty' },
     { from: 'kunyun', to: 'kaido', type: 'loyalty' },
     { from: 'rokki', to: 'kaido', type: 'loyalty' },
-    { from: 'hihimaru', to: 'holed-em', type: 'loyalty' },
-    { from: 'komachiyo', to: 'otama', type: 'loyalty' },
+    {
+      from: 'hihimaru',
+      to: 'otama',
+      type: 'loyalty',
+      note: 'A Beasts Pirates guard until she tamed him with a kibi dango',
+    },
+    {
+      from: 'komachiyo',
+      to: 'otama',
+      type: 'friend',
+      note: 'Her best friend since they were both small',
+    },
     { from: 'minatomo', to: 'oden', type: 'loyalty' },
     { from: 'omasa', to: 'hyogoro', type: 'loyalty' },
     { from: 'tsunagoro', to: 'hyogoro', type: 'loyalty' },
@@ -366,5 +377,6 @@ export const wano: Arc = {
       note: 'Freed him from the Prisoner Mine at Udon, Seastone cuffs and all',
     },
     { from: 'hyogoro', to: 'taka', type: 'romantic', note: 'His wife' },
+    { from: 'mountain-god', to: 'koyama', type: 'parent' },
   ],
 };

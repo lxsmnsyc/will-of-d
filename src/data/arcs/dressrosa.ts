@@ -306,5 +306,13 @@ export const dressrosa: Arc = {
       type: 'saved',
       note: 'Nursed a washed-up pirate back to health because he had her grandson\u2019s face',
     },
+    {
+      from: 'diamante',
+      to: 'trebol',
+      type: 'friend',
+      note: 'Thirty years as elite officers, and the one he got on with best',
+    },
+    { from: 'diamante', to: 'pica', type: 'friend' },
+    { from: 'trebol', to: 'pica', type: 'friend' },
   ],
 };
