@@ -1,11 +1,5 @@
 {
   "name": "will-of-d",
   "compatibility_date": "2026-09-21",
-  "assets": {
-    "directory": "./dist",
-    // The graph has no client-side routes, so an unknown path is a real 404.
-    // A single-page-application rewrite would answer a missing portrait with
-    // the page itself under a 200.
-    "not_found_handling": "none",
-  },
+  "pages_build_output_dir": "dist"
 }

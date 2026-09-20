@@ -37,36 +37,33 @@ pnpm preview
 
 ## Deploying
 
-The site is static, so Cloudflare serves the contents of `dist/` as they are built. It runs
-as a Workers project with static assets, which is what the Cloudflare dashboard creates for
-a site today. `wrangler.jsonc` points at `dist/` and sets nothing else.
+The site is static, so Cloudflare Pages serves `dist/` as it is built. `wrangler.jsonc`
+names the same folder for the command line.
 
-Connect the repository to the project and use these settings:
+Connect the repository to a Pages project and use these settings:
 
 - Build command: `pnpm build`
-- Deploy command: `npx wrangler deploy`
+- Output directory: `dist`
 - Node version: read from `.node-version`, currently 22.16.0
 
 To upload a build from your machine instead:
 
 ```sh
-pnpm run deploy:worker
+pnpm run deploy:pages
 ```
 
-`public/_headers` sets the cache policy and the response headers, and Workers reads it from
-the built folder. Fingerprinted assets and portraits are held for a year, and `index.html`
-is never held. Every response carries a content security policy that allows this origin plus
-the two Cloudflare Web Analytics hosts. Any other host you load from has to be added there
-first.
+`public/_headers` sets the cache policy and the response headers. Fingerprinted assets and
+portraits are held for a year, and `index.html` is never held. Every response carries a
+content security policy that allows this origin plus the two Cloudflare Web Analytics
+hosts. Any other host you load from has to be added there first.
 
-There are no client-side routes, so `not_found_handling` stays off and an unknown path
-returns a real 404. Turning on the single-page-application rewrite would answer a missing
-portrait with the page itself under a 200.
+There are no client-side routes, so the project needs no `_redirects` file. Adding a
+catch-all rewrite would turn a missing portrait into a 200 that returns the page.
 
-For analytics, add the site on the Cloudflare Web Analytics page, then put its snippet in
-`index.html`. It counts visits, referrers, countries and devices. It cannot tell you which
-characters people click, because the graph never changes the URL, so measuring that needs a
-tool with custom events such as Umami or Plausible.
+Turn on Web Analytics from the Pages project and Cloudflare adds the beacon on the next
+deployment. It counts visits, referrers, countries and devices. It cannot tell you which
+characters people click, because the graph never changes the URL, so measuring that needs
+a tool with custom events such as Umami or Plausible.
 
 ## Portraits
 

@@ -12,7 +12,7 @@
     "lint:fix": "oxlint --type-aware --fix",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "deploy:worker": "pnpm build && pnpm dlx wrangler deploy"
+    "deploy:pages": "pnpm build && pnpm dlx wrangler pages deploy"
   },
   "dependencies": {
     "@solidjs/web": "2.0.0-rc.9",
