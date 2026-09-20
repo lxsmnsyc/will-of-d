@@ -45,6 +45,11 @@ export const sabaody: Arc = {
     { id: 'pappag', name: 'Pappag', affiliation: 'Takoyaki 8' },
     { id: 'duval', name: 'Duval', affiliation: 'Rosy Life Riders' },
     { id: 'sentomaru', name: 'Sentomaru', affiliation: 'Marines' },
+    { id: 'marguerite', name: 'Marguerite', affiliation: 'Kuja Tribe' },
+    { id: 'sweet-pea', name: 'Sweet Pea', affiliation: 'Kuja Tribe' },
+    { id: 'aphelandra', name: 'Aphelandra', affiliation: 'Kuja Tribe' },
+    { id: 'kikyo', name: 'Kikyo', affiliation: 'Kuja Tribe' },
+    { id: 'salome', name: 'Salome', affiliation: 'Kuja Pirates' },
   ],
   relations: [
     {
@@ -153,5 +158,24 @@ export const sabaody: Arc = {
       type: 'loyalty',
       note: 'A personal debt he paid by standing against the World Government',
     },
+    {
+      from: 'marguerite',
+      to: 'luffy',
+      type: 'saved',
+      note: 'Fed and clothed a stranger who had fallen out of the sky',
+    },
+    { from: 'sweet-pea', to: 'luffy', type: 'saved' },
+    { from: 'aphelandra', to: 'luffy', type: 'saved' },
+    {
+      from: 'luffy',
+      to: 'marguerite',
+      type: 'saved',
+      note: 'Would not leave the island while she was still stone',
+    },
+    { from: 'marguerite', to: 'hancock', type: 'loyalty' },
+    { from: 'sweet-pea', to: 'hancock', type: 'loyalty' },
+    { from: 'aphelandra', to: 'hancock', type: 'loyalty' },
+    { from: 'kikyo', to: 'hancock', type: 'loyalty' },
+    { from: 'salome', to: 'hancock', type: 'loyalty' },
   ],
 };
