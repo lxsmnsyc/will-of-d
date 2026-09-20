@@ -161,5 +161,11 @@ export const egghead: Arc = {
       note: 'The man who made him want to be a pirate in the first place',
     },
     { from: 'caribou', to: 'teach', type: 'loyalty' },
+    {
+      from: 'luffy',
+      to: 'lilith',
+      type: 'saved',
+      note: 'The one Vegapunk who got off the island, and the one who told him that counted',
+    },
   ],
 };
