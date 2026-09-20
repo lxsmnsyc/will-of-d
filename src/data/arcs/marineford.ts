@@ -325,5 +325,11 @@ export const marineford: Arc = {
     },
     { from: 'dogra', to: 'dadan', type: 'loyalty' },
     { from: 'magra', to: 'dadan', type: 'loyalty' },
+    {
+      from: 'garp',
+      to: 'aokiji',
+      type: 'taught',
+      note: 'Trained him from the day he joined',
+    },
   ],
 };

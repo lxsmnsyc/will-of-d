@@ -81,6 +81,8 @@ export const alabasta: Arc = {
       epithet: 'Mr. 1',
       affiliation: 'Baroque Works',
     },
+    { id: 'mr-13', name: 'Mr. 13', affiliation: 'Baroque Works' },
+    { id: 'miss-friday', name: 'Miss Friday', affiliation: 'Baroque Works' },
   ],
   relations: [
     { from: 'cobra', to: 'vivi', type: 'parent' },
@@ -237,5 +239,20 @@ export const alabasta: Arc = {
     { from: 'vivi', to: 'usopp', type: 'friend' },
     { from: 'vivi', to: 'sanji', type: 'friend' },
     { from: 'vivi', to: 'chopper', type: 'friend' },
+    {
+      from: 'mr-13',
+      to: 'miss-friday',
+      type: 'friend',
+      note: 'The Unluckies, who never worked apart',
+    },
+    { from: 'mr-13', to: 'crocodile', type: 'loyalty' },
+    { from: 'miss-friday', to: 'crocodile', type: 'loyalty' },
+    {
+      from: 'vivi',
+      to: 'dalton',
+      type: 'influenced',
+      note: 'A child apologising to the king who shoved her, which turned her escort against him',
+    },
+    { from: 'dalton', to: 'vivi', type: 'saved' },
   ],
 };

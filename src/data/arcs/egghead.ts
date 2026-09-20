@@ -154,5 +154,12 @@ export const egghead: Arc = {
       type: 'friend',
       note: 'Colleagues at MADS, and the pair who later built NEO MADS',
     },
+    {
+      from: 'teach',
+      to: 'caribou',
+      type: 'influenced',
+      note: 'The man who made him want to be a pirate in the first place',
+    },
+    { from: 'caribou', to: 'teach', type: 'loyalty' },
   ],
 };

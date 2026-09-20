@@ -2,6 +2,7 @@ import type { SimulationLinkDatum, SimulationNodeDatum } from 'd3-force';
 import { CHARACTERS, RELATIONS } from '../data';
 import type { RelationFamily, RelationType } from '../data/types';
 import { RELATION_STYLES } from '../data/types';
+import { detectCommunities } from './communities';
 import { pageRank } from './pagerank';
 
 export interface GraphNode extends SimulationNodeDatum {
@@ -16,6 +17,8 @@ export interface GraphNode extends SimulationNodeDatum {
   rankPosition: number;
   /** Blend of PageRank and degree, 0..1, driving radius and fill. */
   weight: number;
+  /** Community index, used by the layout to keep related nodes together. */
+  cluster: number;
   radius: number;
   degree: number;
   /** Lowercased haystack for the search box. */
@@ -71,6 +74,15 @@ export function buildGraph(): Graph {
     degree.set(relation.to, (degree.get(relation.to) ?? 0) + 1);
   }
 
+  const adjacency = new Map<string, Set<string>>(
+    ids.map(id => [id, new Set<string>()]),
+  );
+  for (const relation of RELATIONS) {
+    adjacency.get(relation.from)!.add(relation.to);
+    adjacency.get(relation.to)!.add(relation.from);
+  }
+  const clusters = detectCommunities(ids, adjacency);
+
   const rankValues = ids.map(id => ranks.get(id) ?? 0);
   const minRank = Math.min(...rankValues) || Number.EPSILON;
   const maxRank = Math.max(...rankValues);
@@ -124,6 +136,7 @@ export function buildGraph(): Graph {
       rankPosition: positions.get(character.id) ?? ids.length,
       weight,
       radius: MIN_RADIUS + weight * (MAX_RADIUS - MIN_RADIUS),
+      cluster: clusters.get(character.id) ?? 0,
       degree: degree.get(character.id) ?? 0,
       search: [character.name, character.epithet, character.affiliation]
         .filter(Boolean)

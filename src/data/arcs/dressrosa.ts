@@ -105,6 +105,7 @@ export const dressrosa: Arc = {
     { id: 'tank-lepanto', name: 'Tank Lepanto', affiliation: 'Riku Family' },
     { id: 'hack', name: 'Hack', affiliation: 'Revolutionary Army' },
     { id: 'gatz', name: 'Gatz', affiliation: 'Corrida Colosseum' },
+    { id: 'barrels', name: 'Diez Barrels', affiliation: 'Barrels Pirates' },
   ],
   relations: [
     {
@@ -238,5 +239,12 @@ export const dressrosa: Arc = {
       note: 'Stood over him in the Birdcage until he could get back up',
     },
     { from: 'scarlett', to: 'viola', type: 'sibling' },
+    { from: 'barrels', to: 'drake', type: 'parent' },
+    {
+      from: 'barrels',
+      to: 'drake',
+      type: 'influenced',
+      note: 'A boy who wanted to be the Marine officer his father had been',
+    },
   ],
 };

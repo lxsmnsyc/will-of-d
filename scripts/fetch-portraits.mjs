@@ -31,6 +31,13 @@ const ALIASES = {
   kinemon: 'Kinemon',
 };
 
+/**
+ * AniList's One Piece cast mixes in anime-only characters, and a few of them
+ * carry a canon character's name. Skip the match rather than take the wrong
+ * face: Shepherd Sommers was landing on a G-5 marine from a filler arc.
+ */
+const NO_MATCH = new Set(['sommers']);
+
 const STOP = new Set(['d', 'the', 'of', 'dr', 'professor', 'jr', 'ii', 'iii']);
 
 function tokens(name) {
@@ -113,6 +120,8 @@ function namesOf(entry) {
  * outranks every partial one, otherwise Brook's "Soul King" alias steals King.
  */
 function findMatch(character, cast) {
+  if (NO_MATCH.has(character.id)) return null;
+
   const alias = ALIASES[character.id];
   if (alias) {
     const hit = cast.find(entry => namesOf(entry).includes(alias));

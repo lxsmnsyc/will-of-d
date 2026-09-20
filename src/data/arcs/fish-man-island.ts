@@ -29,6 +29,8 @@ export const fishManIsland: Arc = {
     { id: 'dosun', name: 'Dosun', affiliation: 'New Fish-Man Pirates' },
     { id: 'ikaros', name: 'Ikaros Much', affiliation: 'New Fish-Man Pirates' },
     { id: 'hyouzou', name: 'Hyouzou', affiliation: 'New Fish-Man Pirates' },
+    { id: 'caribou', name: 'Caribou', affiliation: 'Caribou Pirates' },
+    { id: 'coribou', name: 'Coribou', affiliation: 'Caribou Pirates' },
   ],
   relations: [
     {
@@ -88,5 +90,7 @@ export const fishManIsland: Arc = {
       type: 'influenced',
       note: 'Filled a boy\u2019s childhood with tales of fish-man supremacy',
     },
+    { from: 'caribou', to: 'coribou', type: 'sibling' },
+    { from: 'coribou', to: 'caribou', type: 'loyalty' },
   ],
 };

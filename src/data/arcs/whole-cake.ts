@@ -131,6 +131,12 @@ export const wholeCake: Arc = {
     { id: 'pez', name: 'Capone Pez', affiliation: 'Fire Tank Pirates' },
     { id: 'vito', name: 'Vito', affiliation: 'Fire Tank Pirates' },
     { id: 'gotti', name: 'Gotti', affiliation: 'Fire Tank Pirates' },
+    {
+      id: 'morgans',
+      name: 'Morgans',
+      epithet: 'Big News',
+      affiliation: 'World Economy News Paper',
+    },
   ],
   relations: [
     { from: 'carmel', to: 'big-mom', type: 'adopted' },

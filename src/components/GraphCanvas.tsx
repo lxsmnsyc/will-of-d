@@ -6,6 +6,8 @@ import {
   forceX,
   forceY,
   type Simulation,
+  type SimulationLinkDatum,
+  type SimulationNodeDatum,
 } from 'd3-force';
 import { select } from 'd3-selection';
 import {
@@ -37,6 +39,107 @@ export interface GraphCanvasProps {
 const MIN_SCALE = 0.15;
 const MAX_SCALE = 5;
 const CAMERA_MS = 420;
+
+interface ClusterNode extends SimulationNodeDatum {
+  id: number;
+  radius: number;
+  /** Bonds leading out of this group, which is what the meta links act on. */
+  bridges: number;
+}
+
+interface ClusterLink extends SimulationLinkDatum<ClusterNode> {
+  source: ClusterNode | number;
+  target: ClusterNode | number;
+  weight: number;
+}
+
+/**
+ * Lay the communities out first, then hand each node an anchor to sit near.
+ *
+ * Running one simulation over every node lets a tightly connected group drift
+ * into whatever gap the global gravity leaves, which is how the Five Elders
+ * came to sit between two Skypiea characters they have nothing to do with.
+ * Placing the groups relative to each other first gives every node a
+ * neighbourhood to belong to before the fine layout starts.
+ */
+function layoutClusters(graph: Graph): Map<number, { x: number; y: number }> {
+  const members = new Map<number, GraphNode[]>();
+  for (const node of graph.nodes) {
+    const list = members.get(node.cluster);
+    if (list) list.push(node);
+    else members.set(node.cluster, [node]);
+  }
+
+  const weights = new Map<string, number>();
+  const bridges = new Map<number, number>();
+  for (const link of graph.links) {
+    const a = link.source.cluster;
+    const b = link.target.cluster;
+    if (a === b) continue;
+    const key = a < b ? `${a}|${b}` : `${b}|${a}`;
+    weights.set(key, (weights.get(key) ?? 0) + 1);
+    bridges.set(a, (bridges.get(a) ?? 0) + 1);
+    bridges.set(b, (bridges.get(b) ?? 0) + 1);
+  }
+
+  const nodes: ClusterNode[] = [...members].map(([id, group]) => {
+    // Pack by area, so a cluster's disc is big enough to hold its members.
+    const area = group.reduce((sum, node) => sum + node.radius ** 2, 0);
+    return {
+      id,
+      radius: Math.sqrt(area) * 1.8 + 20,
+      bridges: bridges.get(id) ?? 0,
+    };
+  });
+  const byCluster = new Map(nodes.map(node => [node.id, node]));
+  const links: ClusterLink[] = [...weights].map(([key, weight]) => {
+    const [a, b] = key.split('|').map(Number);
+    return {
+      source: byCluster.get(a)!,
+      target: byCluster.get(b)!,
+      weight,
+    };
+  });
+
+  const centring = (node: ClusterNode) => (node.bridges === 0 ? 0.6 : 0.02);
+
+  const simulation = forceSimulation<ClusterNode>(nodes)
+    .force(
+      'link',
+      forceLink<ClusterNode, ClusterLink>(links)
+        .id(node => node.id)
+        .distance(link => {
+          const source = link.source as ClusterNode;
+          const target = link.target as ClusterNode;
+          return source.radius + target.radius + 60;
+        })
+        // Two groups joined by several bonds sit closer than two joined by one.
+        .strength(link => Math.min(0.7, 0.16 * link.weight)),
+    )
+    .force(
+      'charge',
+      forceManyBody<ClusterNode>().strength(node => -node.radius * 9),
+    )
+    .force(
+      'collide',
+      forceCollide<ClusterNode>()
+        .radius(node => node.radius)
+        .iterations(3),
+    )
+    // A group with no bonds leading out of it — Kuro's crew, Enel's priests,
+    // the Impel Down wardens — feels nothing but repulsion from every other
+    // group, and gets shoved to the far rim. Pull those in hard instead, and
+    // let collision tuck them into whatever gaps the linked groups leave.
+    .force('x', forceX<ClusterNode>(0).strength(centring))
+    .force('y', forceY<ClusterNode>(0).strength(centring))
+    .stop();
+
+  for (let i = 0; i < 400; i += 1) simulation.tick();
+
+  return new Map(
+    nodes.map(node => [node.id, { x: node.x ?? 0, y: node.y ?? 0 }]),
+  );
+}
 
 function buildFocus(graph: Graph, id: string | null): Focus | null {
   if (!id) return null;
@@ -205,19 +308,28 @@ export function GraphCanvas(props: GraphCanvasProps) {
     scene.theme = readTheme(canvas);
     resize();
 
+    const anchors = layoutClusters(scene.graph);
+    const anchorOf = (node: GraphNode) =>
+      anchors.get(node.cluster) ?? { x: 0, y: 0 };
+
     simulation = forceSimulation<GraphNode, GraphLink>(scene.graph.nodes)
       .force(
         'link',
         forceLink<GraphNode, GraphLink>(scene.graph.links)
           .id(node => node.id)
-          .distance(link => 62 + link.source.radius + link.target.radius)
-          .strength(0.24),
+          .distance(link => 52 + link.source.radius + link.target.radius)
+          // A bond inside a group pulls; one that bridges two groups is left
+          // slack, so the groups can sit apart instead of being dragged
+          // through each other.
+          .strength(link =>
+            link.source.cluster === link.target.cluster ? 0.42 : 0.05,
+          ),
       )
       .force(
         'charge',
         forceManyBody<GraphNode>()
-          .strength(node => -260 - node.radius * 16)
-          .distanceMax(1400),
+          .strength(node => -230 - node.radius * 14)
+          .distanceMax(900),
       )
       .force(
         'collide',
@@ -225,8 +337,8 @@ export function GraphCanvas(props: GraphCanvasProps) {
           .radius(node => node.radius + 11)
           .iterations(2),
       )
-      .force('x', forceX<GraphNode>(0).strength(0.04))
-      .force('y', forceY<GraphNode>(0).strength(0.05))
+      .force('x', forceX<GraphNode>(node => anchorOf(node).x).strength(0.24))
+      .force('y', forceY<GraphNode>(node => anchorOf(node).y).strength(0.24))
       .on('tick', schedule);
 
     zoomBehavior = zoom<HTMLCanvasElement, unknown>()
