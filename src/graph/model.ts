@@ -44,8 +44,8 @@ export interface Graph {
   neighbours: Map<string, Set<string>>;
 }
 
-const MIN_RADIUS = 6;
-const MAX_RADIUS = 42;
+const MIN_RADIUS = 8;
+const MAX_RADIUS = 64;
 
 export function buildGraph(): Graph {
   const ids = CHARACTERS.map(character => character.id);

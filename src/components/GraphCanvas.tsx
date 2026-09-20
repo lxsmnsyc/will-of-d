@@ -216,13 +216,13 @@ export function GraphCanvas(props: GraphCanvasProps) {
       .force(
         'charge',
         forceManyBody<GraphNode>()
-          .strength(node => -230 - node.radius * 20)
+          .strength(node => -190 - node.radius * 13)
           .distanceMax(1200),
       )
       .force(
         'collide',
         forceCollide<GraphNode>()
-          .radius(node => node.radius + 9)
+          .radius(node => node.radius + 7)
           .iterations(2),
       )
       .force('x', forceX<GraphNode>(0).strength(0.045))
