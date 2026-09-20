@@ -1,0 +1,70 @@
+import type { Arc } from '../types';
+
+export const waterSeven: Arc = {
+  id: 'water-seven',
+  title: 'Water 7 & Enies Lobby',
+  saga: 'Water 7',
+  characters: [
+    {
+      id: 'franky',
+      name: 'Franky',
+      epithet: 'Cutty Flam',
+      affiliation: 'Straw Hat Pirates',
+    },
+    { id: 'tom', name: 'Tom', affiliation: "Tom's Workers" },
+    { id: 'iceburg', name: 'Iceburg', affiliation: 'Galley-La Company' },
+    { id: 'olvia', name: 'Nico Olvia', affiliation: 'Ohara' },
+    { id: 'clover', name: 'Professor Clover', affiliation: 'Ohara' },
+    { id: 'saul', name: 'Jaguar D. Saul', affiliation: 'Marines' },
+    {
+      id: 'aokiji',
+      name: 'Kuzan',
+      epithet: 'Aokiji',
+      affiliation: 'Blackbeard Pirates',
+    },
+    { id: 'lucci', name: 'Rob Lucci', affiliation: 'CP0' },
+  ],
+  relations: [
+    { from: 'tom', to: 'franky', type: 'taught' },
+    { from: 'tom', to: 'franky', type: 'adopted' },
+    { from: 'tom', to: 'iceburg', type: 'taught' },
+    { from: 'tom', to: 'iceburg', type: 'adopted' },
+    { from: 'olvia', to: 'robin', type: 'parent' },
+    { from: 'clover', to: 'robin', type: 'taught' },
+    {
+      from: 'saul',
+      to: 'robin',
+      type: 'saved',
+      note: 'Put her on a boat out of Ohara',
+    },
+    {
+      from: 'saul',
+      to: 'robin',
+      type: 'influenced',
+      note: 'Taught her to laugh',
+    },
+    { from: 'saul', to: 'aokiji', type: 'influenced' },
+    {
+      from: 'aokiji',
+      to: 'robin',
+      type: 'saved',
+      note: 'Let a child walk away from a Buster Call',
+    },
+    {
+      from: 'luffy',
+      to: 'robin',
+      type: 'saved',
+      note: 'Burned a flag so she would say she wanted to live',
+    },
+    { from: 'lucci', to: 'franky', type: 'influenced' },
+    {
+      from: 'tom',
+      to: 'franky',
+      type: 'saved',
+      note: 'Took the blame for the Sea Train in front of the court',
+    },
+    { from: 'franky', to: 'tom', type: 'loyalty' },
+    { from: 'iceburg', to: 'tom', type: 'loyalty' },
+    { from: 'franky', to: 'luffy', type: 'loyalty' },
+  ],
+};
