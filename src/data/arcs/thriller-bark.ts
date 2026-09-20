@@ -31,6 +31,18 @@ export const thrillerBark: Arc = {
       epithet: 'the Tyrant',
       affiliation: 'Revolutionary Army',
     },
+    {
+      id: 'madaisuki',
+      name: 'Mizuta Madaisuki',
+      affiliation: 'Rumbar Pirates',
+    },
+    {
+      id: 'mawaritosuki',
+      name: 'Mizuta Mawaritosuki',
+      affiliation: 'Rumbar Pirates',
+    },
+    { id: 'hogback', name: 'Hogback', affiliation: 'Thriller Bark' },
+    { id: 'absalom', name: 'Absalom', affiliation: 'Thriller Bark' },
   ],
   relations: [
     { from: 'yorki', to: 'brook', type: 'influenced' },
@@ -51,5 +63,15 @@ export const thrillerBark: Arc = {
     { from: 'brook', to: 'luffy', type: 'loyalty' },
     { from: 'brook', to: 'yorki', type: 'loyalty' },
     { from: 'perona', to: 'moria', type: 'loyalty' },
+    {
+      from: 'madaisuki',
+      to: 'mawaritosuki',
+      type: 'sibling',
+      note: 'Identical twins, named by Oda in an SBS',
+    },
+    { from: 'madaisuki', to: 'yorki', type: 'loyalty' },
+    { from: 'mawaritosuki', to: 'yorki', type: 'loyalty' },
+    { from: 'hogback', to: 'moria', type: 'loyalty' },
+    { from: 'absalom', to: 'moria', type: 'loyalty' },
   ],
 };

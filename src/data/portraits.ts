@@ -2,6 +2,7 @@
 
 /** Character ids with a file at public/portraits/<id>.webp. */
 export const PORTRAIT_IDS: ReadonlySet<string> = new Set([
+  'absalom',
   'ace',
   'aisa',
   'akainu',
@@ -96,6 +97,7 @@ export const PORTRAIT_IDS: ReadonlySet<string> = new Set([
   'hina',
   'hiyori',
   'hocker',
+  'hogback',
   'hongo',
   'hyogoro',
   'iceburg',
