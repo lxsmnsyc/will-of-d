@@ -108,6 +108,7 @@ export const marineford: Arc = {
     { id: 'domino', name: 'Domino', affiliation: 'Impel Down' },
     { id: 'sadi', name: 'Sadi', affiliation: 'Impel Down' },
     { id: 'saldeath', name: 'Saldeath', affiliation: 'Impel Down' },
+    { id: 'squard', name: 'Squard', affiliation: 'Whitebeard Pirates' },
   ],
   relations: [
     { from: 'roger', to: 'ace', type: 'parent' },
@@ -128,7 +129,7 @@ export const marineford: Arc = {
     { from: 'dadan', to: 'luffy', type: 'adopted' },
     { from: 'dadan', to: 'sabo', type: 'adopted' },
     { from: 'outlook', to: 'sabo', type: 'parent' },
-    { from: 'sabo', to: 'luffy', type: 'influenced', note: 'Sworn brother' },
+    { from: 'sabo', to: 'luffy', type: 'sibling' },
     { from: 'whitebeard', to: 'ace', type: 'adopted' },
     { from: 'whitebeard', to: 'marco', type: 'adopted' },
     { from: 'whitebeard', to: 'jozu', type: 'adopted' },
@@ -302,6 +303,14 @@ export const marineford: Arc = {
       to: 'luffy',
       type: 'friend',
       note: 'Spent himself twice over for a man he had known a week',
+    },
+    { from: 'ace', to: 'sabo', type: 'sibling' },
+    { from: 'squard', to: 'whitebeard', type: 'loyalty' },
+    {
+      from: 'whitebeard',
+      to: 'squard',
+      type: 'influenced',
+      note: 'Told him not to hold children to account for their fathers\u2019 sins',
     },
   ],
 };

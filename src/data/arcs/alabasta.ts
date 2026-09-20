@@ -110,7 +110,12 @@ export const alabasta: Arc = {
     { from: 'hiluluk', to: 'chopper', type: 'influenced' },
     { from: 'kureha', to: 'chopper', type: 'taught' },
     { from: 'hiluluk', to: 'dalton', type: 'influenced' },
-    { from: 'ace', to: 'luffy', type: 'influenced', note: 'Sworn brother' },
+    {
+      from: 'ace',
+      to: 'luffy',
+      type: 'sibling',
+      note: 'Sworn brothers over a stolen cup of sake',
+    },
     {
       from: 'crocus',
       to: 'laboon',
