@@ -145,6 +145,8 @@ export const eastBlue: Arc = {
     { id: 'carne', name: 'Carne', affiliation: 'Baratie' },
     { id: 'johnny', name: 'Johnny', affiliation: 'Bounty Hunters' },
     { id: 'yosaku', name: 'Yosaku', affiliation: 'Bounty Hunters' },
+    { id: 'kuroobi', name: 'Kuroobi', affiliation: 'Arlong Pirates' },
+    { id: 'chew', name: 'Chew', affiliation: 'Arlong Pirates' },
   ],
   relations: [
     {
@@ -359,5 +361,33 @@ export const eastBlue: Arc = {
       type: 'saved',
       note: 'Named the scurvy nobody else could',
     },
+    {
+      from: 'genzo',
+      to: 'nami',
+      type: 'adopted',
+      note: 'The father figure both girls were left with',
+    },
+    { from: 'genzo', to: 'nojiko', type: 'adopted' },
+    {
+      from: 'bellemere',
+      to: 'nami',
+      type: 'influenced',
+      note: 'Died insisting she was their mother',
+    },
+    { from: 'bellemere', to: 'nojiko', type: 'influenced' },
+    {
+      from: 'nojiko',
+      to: 'nami',
+      type: 'loyalty',
+      note: 'Tattooed her own arm so her sister would not be the only one marked',
+    },
+    {
+      from: 'nojiko',
+      to: 'bellemere',
+      type: 'loyalty',
+      note: 'Kept the mikan grove alive for her',
+    },
+    { from: 'kuroobi', to: 'arlong', type: 'loyalty' },
+    { from: 'chew', to: 'arlong', type: 'loyalty' },
   ],
 };
