@@ -32,6 +32,8 @@ export const sabaody: Arc = {
       epithet: 'Surgeon of Death',
       affiliation: 'Heart Pirates',
     },
+    { id: 'apoo', name: 'Scratchmen Apoo', affiliation: 'On Air Pirates' },
+    { id: 'hawkins', name: 'Basil Hawkins', affiliation: 'Hawkins Pirates' },
     { id: 'bepo', name: 'Bepo', affiliation: 'Heart Pirates' },
     { id: 'penguin', name: 'Penguin', affiliation: 'Heart Pirates' },
     { id: 'shachi', name: 'Shachi', affiliation: 'Heart Pirates' },
