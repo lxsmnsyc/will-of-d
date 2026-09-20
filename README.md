@@ -35,6 +35,31 @@ pnpm preview
 
 `pnpm lint`, `pnpm format` and `pnpm type-check` cover oxlint, oxfmt and tsgo.
 
+## Deploying
+
+The site is static, so Cloudflare Pages serves `dist/` as it is built.
+
+Connect the repository to a Pages project and use these settings:
+
+- Build command: `pnpm build`
+- Output directory: `dist`
+- Node version: read from `.node-version`, currently 22.16.0
+
+`wrangler.jsonc` holds the same output directory for the command line. To upload a build
+from your machine instead:
+
+```sh
+pnpm run deploy:pages
+```
+
+`public/_headers` sets the cache policy and the response headers. Fingerprinted assets and
+portraits are held for a year, `index.html` is never held, and every response carries a
+content security policy that allows this origin only. Nothing is loaded from another host,
+so adding one means editing that policy.
+
+There are no client-side routes, so the project needs no `_redirects` file. Adding a
+catch-all rewrite would turn a missing portrait into a 200 that returns the page.
+
 ## Portraits
 
 `public/portraits/<id>.webp` holds a 128px square crop per character, re-encoded with

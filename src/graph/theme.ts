@@ -68,7 +68,7 @@ function parseHex(hex: string): [number, number, number] {
   ];
 }
 
-/** Straight sRGB mix — the ramp ends are close enough in hue for it to hold. */
+/** Straight sRGB mix. The ramp ends are close enough in hue for it to hold. */
 export function mixHex(from: string, to: string, t: number): string {
   const a = parseHex(from);
   const b = parseHex(to);

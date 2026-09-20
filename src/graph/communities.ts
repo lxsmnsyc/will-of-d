@@ -1,21 +1,21 @@
 /**
  * Louvain community detection over the undirected relation graph.
  *
- * The force layout on its own only knows about individual edges, so a tightly
- * connected group with few bonds leading out of it drifts into whatever gap the
- * global gravity leaves — which is how the Five Elders came to sit between
+ * The force layout on its own only knows about individual edges. A tightly
+ * connected group with few bonds leading out of it drifts into whatever gap
+ * the global gravity leaves. That is how the Five Elders came to sit between
  * Kalgara and Mont Blanc Cricket. Grouping first lets the layout give each
  * group its own patch of canvas.
  *
- * Label propagation was the obvious first choice and it fails badly here: the
+ * Label propagation was the obvious first choice and it fails badly here. The
  * cast is bridged densely enough that one label floods 387 of the 468
- * characters. Modularity optimisation instead recovers the groups a reader
- * would name — the Charlotte family, the Beasts Pirates, Cipher Pol and the
- * Five Elders above them.
+ * characters. Modularity optimisation recovers the groups a reader would name
+ * instead, such as the Charlotte family, the Beasts Pirates, Cipher Pol and
+ * the Five Elders above them.
  *
- * Node order is fixed and improvements need to clear a tolerance, so the same
- * dataset always produces the same grouping and the graph opens the same way
- * twice.
+ * Node order is fixed and improvements need to clear a tolerance. The same
+ * dataset therefore always produces the same grouping, and the graph opens the
+ * same way twice.
  */
 
 /** Above 1 this favours more, smaller communities. */

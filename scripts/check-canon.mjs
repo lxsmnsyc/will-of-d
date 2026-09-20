@@ -5,7 +5,7 @@
  *
  * A character qualifies if they appear in, or are mentioned in, the manga, a
  * Vivre Card databook or one of Oda's SBS columns. The One Piece Fandom wiki's
- * `first` infobox field records which, so a debut naming only an episode, a
+ * `first` infobox field records which one. A debut naming only an episode, a
  * film or a light novel means the character does not belong here.
  */
 import { createServer } from 'vite';
@@ -69,8 +69,7 @@ for (const character of CHARACTERS) {
   }
 
   if (!debut) unverified.push(character.name);
-  else if (!/chapter/i.test(debut))
-    suspect.push(`${character.name} — ${debut}`);
+  else if (!/chapter/i.test(debut)) suspect.push(`${character.name}: ${debut}`);
 
   await new Promise(resolve => setTimeout(resolve, 120));
 }

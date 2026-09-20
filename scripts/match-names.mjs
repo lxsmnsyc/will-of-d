@@ -1,8 +1,8 @@
 /**
  * Matching a dataset name to a name in somebody else's cast list.
  *
- * Shared by the AniList and MyAnimeList fetchers, which disagree about
- * romanisation and word order but not about who anyone is.
+ * Shared by the AniList and MyAnimeList fetchers. The two sources disagree
+ * about romanisation and word order, but not about who anyone is.
  */
 
 const STOP = new Set(['d', 'the', 'of', 'dr', 'professor', 'jr', 'ii', 'iii']);
@@ -14,7 +14,7 @@ export function tokens(name) {
       .normalize('NFD')
       .replaceAll(/[̀-ͯ]/g, '')
       .replaceAll(/[^a-z0-9\s]/g, ' ')
-      // Collapse the long-vowel romanisations: Kouzuki/Kozuki, Raizou/Raizo.
+      // Collapse the long-vowel romanisations, such as Kouzuki and Kozuki.
       .replaceAll('ou', 'o')
       .replaceAll('uu', 'u')
       .replaceAll('oo', 'o')
@@ -24,9 +24,10 @@ export function tokens(name) {
 }
 
 /**
- * Score by overlap against the shorter name, so "Garp" matches "Monkey D.
- * Garp" at 1.0 while "Luffy Monkey" only reaches 0.5. An exact token-set hit
- * outranks every partial one, otherwise Brook's "Soul King" alias steals King.
+ * Score by overlap against the shorter name. "Garp" matches "Monkey D. Garp"
+ * at 1.0, while "Luffy Monkey" only reaches 0.5. An exact token-set hit
+ * outranks every partial one. Without that, Brook's "Soul King" alias steals
+ * King.
  *
  * `namesOf` yields every spelling an entry answers to.
  */

@@ -126,10 +126,11 @@ function layoutClusters(graph: Graph): Map<number, { x: number; y: number }> {
         .radius(node => node.radius)
         .iterations(3),
     )
-    // A group with no bonds leading out of it — Kuro's crew, Enel's priests,
-    // the Impel Down wardens — feels nothing but repulsion from every other
-    // group, and gets shoved to the far rim. Pull those in hard instead, and
-    // let collision tuck them into whatever gaps the linked groups leave.
+    // A group with no bonds leading out of it feels nothing but repulsion from
+    // every other group, and gets shoved to the far rim. Kuro's crew, Enel's
+    // priests and the Impel Down wardens are all like this. Pull those in hard
+    // instead, and let collision tuck them into the gaps the linked groups
+    // leave.
     .force('x', forceX<ClusterNode>(0).strength(centring))
     .force('y', forceY<ClusterNode>(0).strength(centring))
     .stop();
@@ -162,7 +163,7 @@ export function GraphCanvas(props: GraphCanvasProps) {
   let moved = false;
 
   const scene: Scene = {
-    // Assigned in setup(); the component body must not read props.
+    // Assigned in setup(). The component body must not read props.
     graph: undefined as unknown as Graph,
     transform: zoomIdentity,
     width: 1,

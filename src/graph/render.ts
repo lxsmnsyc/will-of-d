@@ -96,10 +96,10 @@ function drawArrow(
   const ty = link.target.y ?? 0;
   const { cx, cy } = control(link);
 
-  // Walking back from the centre along the end tangent only lands on the
-  // curve when the edge is straight; on a bowed one it drifts sideways. Find
-  // where the curve actually crosses the target's circle instead. The
-  // distance to the target falls away monotonically as t nears 1, so bisect.
+  // Walking back from the centre along the end tangent only lands on the curve
+  // when the edge is straight. On a bowed edge it drifts sideways. Find where
+  // the curve actually crosses the target's circle instead. The distance to the
+  // target falls away monotonically as t nears 1, so bisect.
   const gap = link.target.radius + 2.5 / scale;
   let lo = 0;
   let hi = 1;
@@ -174,7 +174,7 @@ function drawNode(
     );
     ctx.restore();
   } else if (withPortrait && onScreenRadius >= PORTRAIT_MIN_RADIUS) {
-    // No portrait on file: initials keep the node identifiable up close.
+    // No portrait on file. Initials keep the node identifiable up close.
     // Dimmed nodes skip them, or the background turns into a wall of letters.
     ctx.save();
     ctx.font = `600 ${node.radius}px ui-sans-serif, system-ui, sans-serif`;

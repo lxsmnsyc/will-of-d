@@ -55,9 +55,9 @@ const MAX_RADIUS = 128;
 export function buildGraph(): Graph {
   const ids = CHARACTERS.map(character => character.id);
 
-  // The walk runs toward whoever each relation makes important: the mentor,
-  // the parent, the rescuer — but the lord for loyalty, and both ends for a
-  // partnership.
+  // The walk runs toward whoever each relation makes important. That is the
+  // mentor, the parent or the rescuer. Loyalty points at the lord instead, and
+  // a partnership counts both ends.
   const rankEdges: { from: string; to: string }[] = [];
   for (const relation of RELATIONS) {
     const { credits } = RELATION_STYLES[relation.type];
@@ -99,9 +99,10 @@ export function buildGraph(): Graph {
   );
 
   // Square root, so a node's area rather than its width tracks its connection
-  // count. A log scale was too flat at the top: Luffy has twice the connections
-  // of Whitebeard and log put them within a couple of pixels of each other.
-  // Connection count leads: PageRank on a graph this sparse hands a huge score
+  // count. A log scale was too flat at the top. Luffy has twice the connections
+  // of Whitebeard, and log put them within a couple of pixels of each other.
+  //
+  // Connection count leads. PageRank on a graph this sparse hands a huge score
   // to anyone sitting upstream of a busy character, which would size Ace's
   // mother like a Yonko.
   const scoreOf = (id: string) => {
@@ -112,10 +113,10 @@ export function buildGraph(): Graph {
   };
 
   const scores = new Map(ids.map(id => [id, scoreOf(id)]));
-  // Ranking the scores spreads the sizes evenly across the cast, but three
-  // quarters of the cast sit on four connections or fewer, so leaning on it
-  // hands most of the radius band to the tail. Keep it as a minority term:
-  // enough to separate one bond from three, not enough to flatten the top.
+  // Ranking the scores spreads the sizes evenly across the cast. Three quarters
+  // of the cast sit on four connections or fewer, so leaning on the rank hands
+  // most of the radius band to the tail. Keep it as a minority term. It should
+  // separate one bond from three without flattening the top.
   const ordered = [...ids].sort(
     (a, b) => (scores.get(a) ?? 0) - (scores.get(b) ?? 0),
   );

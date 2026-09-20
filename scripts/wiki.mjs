@@ -4,9 +4,10 @@
  *   node scripts/wiki.mjs page "Bartholomew Kuma" mother Teach
  *   node scripts/wiki.mjs category "Whitebeard Pirates Division Commanders"
  *
- * `page` prints the sentences matching any of the trailing keywords, which is
- * how the dataset gets checked against something other than memory. Wiki text
- * is CC BY-SA; the relations here are written from it, not copied.
+ * `page` prints the sentences matching any of the trailing keywords. This is
+ * how the dataset gets checked against something other than memory.
+ *
+ * Wiki text is CC BY-SA. The relations here are written from it, not copied.
  */
 const API = 'https://onepiece.fandom.com/api.php';
 const AGENT = 'will-of-d dataset builder';

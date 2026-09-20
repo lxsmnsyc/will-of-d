@@ -13,9 +13,9 @@ export interface PageRankOptions {
  * Standard PageRank with dangling-node mass redistributed uniformly.
  *
  * The caller decides which way the edges point. This graph feeds it the
- * reversed story edges: a surfer walks from a character to the people who
- * shaped them, so rank pools on the parents, mentors and rescuers rather than
- * on the crowd of people each of them touched.
+ * reversed story edges. A surfer then walks from a character to the people who
+ * shaped them. Rank pools on the parents, mentors and rescuers rather than on
+ * the crowd of people each of them touched.
  */
 export function pageRank(
   ids: string[],

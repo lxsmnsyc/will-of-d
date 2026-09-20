@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.34.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +12,8 @@
     "lint": "oxlint --type-aware",
     "lint:fix": "oxlint --type-aware --fix",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt --check ."
+    "format:check": "oxfmt --check .",
+    "deploy:pages": "pnpm build && pnpm dlx wrangler pages deploy"
   },
   "dependencies": {
     "@solidjs/web": "2.0.0-rc.9",

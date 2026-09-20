@@ -10,16 +10,16 @@ export type RelationType =
   | 'friend';
 
 /**
- * Within a colour family, the dash pattern separates one type from another and
- * the arrowhead separates a directed relation from a symmetric one: `parent`
- * and `sibling` are both solid, and only `parent` carries an arrow, exactly as
- * `saved` and `friend` do.
+ * Within a colour family, the dash pattern separates one type from another.
+ * The arrowhead separates a directed relation from a symmetric one. `parent`
+ * and `sibling` are both solid, and only `parent` carries an arrow, the same
+ * way `saved` and `friend` differ.
  *
  * Relations point from the character who gives to the character who receives.
  * The parent, the adopter, the teacher, the influence and the rescuer are
- * always `from`. Loyalty follows the same rule — the retainer gives it — which
- * is why it is the one type whose rank flows the other way. Romance has no
- * giver, so the authored direction carries no meaning.
+ * always `from`. Loyalty follows the same rule, because the retainer gives it.
+ * That is why loyalty is the one type whose rank flows the other way. Romance
+ * has no giver, so the authored direction carries no meaning.
  */
 export interface Relation {
   from: string;
@@ -34,9 +34,9 @@ export interface Character {
   epithet?: string;
   affiliation: string;
   /**
-   * First appearance, as the One Piece wiki records it — a chapter for most,
-   * an SBS volume for the handful Oda only ever answered a question about.
-   * Missing where the wiki gives no chapter at all.
+   * First appearance, as the One Piece wiki records it. This is a chapter for
+   * most characters. It is an SBS volume for the few Oda only ever answered a
+   * question about. It is missing where the wiki gives no chapter at all.
    */
   debut?: string;
 }
@@ -65,8 +65,8 @@ export interface RelationStyle {
   directed: boolean;
   /**
    * Which end the relation makes more important, and so where PageRank should
-   * pool. Mentors and parents earn it; a lord earns the loyalty sworn to them;
-   * a partnership credits both.
+   * pool. Mentors and parents earn it. A lord earns the loyalty sworn to them.
+   * A partnership credits both ends.
    */
   credits: 'source' | 'target' | 'both';
 }
