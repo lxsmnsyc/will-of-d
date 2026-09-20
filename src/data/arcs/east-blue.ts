@@ -134,6 +134,17 @@ export const eastBlue: Arc = {
     { id: 'jango', name: 'Jango', affiliation: 'Black Cat Pirates' },
     { id: 'sham', name: 'Sham', affiliation: 'Black Cat Pirates' },
     { id: 'buchi', name: 'Buchi', affiliation: 'Black Cat Pirates' },
+    {
+      id: 'krieg',
+      name: 'Don Krieg',
+      epithet: 'Foul Play',
+      affiliation: 'Krieg Pirates',
+    },
+    { id: 'pearl', name: 'Pearl', affiliation: 'Krieg Pirates' },
+    { id: 'patty', name: 'Patty', affiliation: 'Baratie' },
+    { id: 'carne', name: 'Carne', affiliation: 'Baratie' },
+    { id: 'johnny', name: 'Johnny', affiliation: 'Bounty Hunters' },
+    { id: 'yosaku', name: 'Yosaku', affiliation: 'Bounty Hunters' },
   ],
   relations: [
     {
@@ -314,5 +325,39 @@ export const eastBlue: Arc = {
     { from: 'jango', to: 'kuro', type: 'loyalty' },
     { from: 'sham', to: 'kuro', type: 'loyalty' },
     { from: 'buchi', to: 'kuro', type: 'loyalty' },
+    {
+      from: 'sanji',
+      to: 'zeff',
+      type: 'loyalty',
+      note: 'Stayed nine years to pay back one meal',
+    },
+    { from: 'patty', to: 'zeff', type: 'loyalty' },
+    { from: 'carne', to: 'zeff', type: 'loyalty' },
+    { from: 'gin', to: 'krieg', type: 'loyalty' },
+    { from: 'pearl', to: 'krieg', type: 'loyalty' },
+    {
+      from: 'gin',
+      to: 'sanji',
+      type: 'influenced',
+      note: 'The first person who ever showed him kindness',
+    },
+    {
+      from: 'johnny',
+      to: 'zoro',
+      type: 'loyalty',
+      note: 'Bounty-hunting partners long before the Straw Hats',
+    },
+    {
+      from: 'yosaku',
+      to: 'zoro',
+      type: 'loyalty',
+      note: 'Bounty-hunting partners long before the Straw Hats',
+    },
+    {
+      from: 'nami',
+      to: 'yosaku',
+      type: 'saved',
+      note: 'Named the scurvy nobody else could',
+    },
   ],
 };
