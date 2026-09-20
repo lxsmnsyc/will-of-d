@@ -6,6 +6,7 @@ import { egghead } from './arcs/egghead';
 import { elbaf } from './arcs/elbaf';
 import { fishManIsland } from './arcs/fish-man-island';
 import { marineford } from './arcs/marineford';
+import { punkHazard } from './arcs/punk-hazard';
 import { sabaody } from './arcs/sabaody';
 import { skypiea } from './arcs/skypiea';
 import { thrillerBark } from './arcs/thriller-bark';
@@ -23,6 +24,7 @@ export const ARCS: Arc[] = [
   sabaody,
   marineford,
   fishManIsland,
+  punkHazard,
   dressrosa,
   wholeCake,
   wano,
