@@ -13,10 +13,12 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# Applied to every response. The page loads nothing from another origin, so the
-# policy can name only this one.
+# Applied to every response. The page itself loads nothing from another origin.
+# The two Cloudflare hosts are there for Web Analytics: the beacon is served from
+# static.cloudflareinsights.com and posts to cloudflareinsights.com. Drop both
+# names if the analytics toggle in the Pages project is ever turned off.
 /*
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   Cross-Origin-Opener-Policy: same-origin

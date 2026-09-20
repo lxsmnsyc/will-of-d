@@ -53,9 +53,14 @@ pnpm run deploy:pages
 ```
 
 `public/_headers` sets the cache policy and the response headers. Fingerprinted assets and
-portraits are held for a year, `index.html` is never held, and every response carries a
-content security policy that allows this origin only. Nothing is loaded from another host,
-so adding one means editing that policy.
+portraits are held for a year, and `index.html` is never held. Every response carries a
+content security policy that allows this origin plus the two Cloudflare Web Analytics
+hosts. Any other host you load from has to be added there first.
+
+Turn on Web Analytics from the Pages project and Cloudflare injects the beacon itself. It
+counts visits, referrers, countries and devices. It cannot tell you which characters
+people click, because the graph never changes the URL, so measuring that needs a tool with
+custom events such as Umami or Plausible.
 
 There are no client-side routes, so the project needs no `_redirects` file. Adding a
 catch-all rewrite would turn a missing portrait into a 200 that returns the page.
