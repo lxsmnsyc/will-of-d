@@ -285,6 +285,13 @@ export const elbaf: Arc = {
     { from: 'sommers', to: 'garling', type: 'loyalty' },
     { from: 'gunko', to: 'garling', type: 'loyalty' },
     { from: 'killingham', to: 'garling', type: 'loyalty' },
+    { from: 'gurou', to: 'imu', type: 'loyalty' },
+    {
+      from: 'harald',
+      to: 'garling',
+      type: 'loyalty',
+      note: 'Joined the Knights of God as a Devoted Blade, then as a full knight',
+    },
     {
       from: 'reuven',
       to: 'brook',

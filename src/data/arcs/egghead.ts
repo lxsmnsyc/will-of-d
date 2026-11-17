@@ -212,6 +212,7 @@ export const egghead: Arc = {
     },
     { from: 'buckingham', to: 'rocks', type: 'loyalty' },
     { from: 'stussy', to: 'vegapunk', type: 'loyalty' },
+    { from: 'garling', to: 'imu', type: 'loyalty' },
     {
       from: 'queen',
       to: 'franky',

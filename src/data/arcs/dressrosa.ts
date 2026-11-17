@@ -489,6 +489,7 @@ export const dressrosa: Arc = {
       type: 'influenced',
       note: 'Brought her into the Revolutionary Army at fourteen',
     },
+    { from: 'hack', to: 'dragon', type: 'loyalty' },
     {
       from: 'gatz',
       to: 'luffy',
